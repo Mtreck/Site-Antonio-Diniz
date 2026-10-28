@@ -1,0 +1,417 @@
+/*
+  Estilo da página Colégio
+  Equipe: Colégio
+  Somente a equipe Colégio edita este arquivo.
+  Use apenas as variáveis de main.css (nada de cor em hexadecimal).
+  Classes desta página começam com "colegio-" (ex.: .colegio-titulo).
+*/
+
+/* ========== 0. TIPOGRAFIA DESTA PÁGINA ========== */
+/* As três fontes do design de referência são carregadas aqui, só nesta página,
+   para não alterar o visual das outras equipes. Todo texto abaixo tem uma fonte
+   do sistema como reserva, então a página continua legível sem internet. */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap");
+
+/* Sobrescreve as variáveis de fonte do main.css só nesta página:
+   - títulos principais ......... Playfair Display
+   - subtítulos e interface .... Poppins
+   - texto corrido ............. Nunito */
+body[data-pagina="colegio"] {
+  --fonte-titulo: "Playfair Display", Georgia, "Times New Roman", serif;
+  --fonte-interface: "Poppins", "Segoe UI", Roboto, Arial, sans-serif;
+  --fonte-texto: "Nunito", system-ui, "Segoe UI", Arial, sans-serif;
+
+  /* Nunito tem olhos maiores e linhas mais soltas que a fonte anterior */
+  line-height: 1.7;
+}
+
+/* h1 e h2 já usam --fonte-titulo pelo main.css. h3 e os elementos de interface
+   (botões, setas e barra de progresso) passam a usar Poppins. */
+body[data-pagina="colegio"] h3 {
+  font-family: var(--fonte-interface);
+}
+
+/* ========== 1. BASE DA PÁGINA ========== */
+
+/* Respiro entre os blocos da página (ex.: entre os cards de Estrutura e a Missão) */
+.colegio-secao {
+  margin-top: var(--espaco-xl);
+}
+
+/* Abertura da página */
+.colegio-abertura {
+  padding-bottom: var(--espaco-md);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+/* Texto de apresentação: um pouco maior e com medida de leitura confortável.
+   Usa --cor-texto (e não --cor-texto-suave) porque o cinza-azulado claro não
+   atinge o contraste mínimo de leitura exigido pelo REGRAS.md. */
+.colegio-lead {
+  max-width: 62ch;
+  font-size: 1.1rem;
+}
+
+/* Parágrafo de apresentação de cada seção */
+.colegio-secao-intro {
+  max-width: 68ch;
+}
+
+/* Links dentro do texto */
+.colegio-secao a {
+  color: var(--cor-link);
+  text-underline-offset: 3px;
+}
+
+.colegio-secao a:hover {
+  color: var(--cor-primaria);
+}
+
+/* ========== 2. HISTÓRIA EM PARTES QUE ABREM E FECHAM ========== */
+
+.colegio-historia {
+  margin-top: var(--espaco-lg);
+  border-top: 1px solid var(--cor-borda);
+}
+
+.colegio-fase {
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+/* O h3 existe para a ordem dos títulos; o botão é o que a pessoa clica */
+.colegio-fase-titulo {
+  margin-bottom: 0;
+  font-size: 1.0625rem;
+}
+
+.colegio-fase-botao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-md);
+  width: 100%;
+  padding: var(--espaco-md) 0;
+  border: 0;
+  background-color: transparent;
+  color: var(--cor-primaria);
+  font-family: var(--fonte-interface);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.colegio-fase-botao:hover {
+  color: var(--cor-secundaria);
+}
+
+/* Sinal de + e − desenhado com duas linhas, sem imagem */
+.colegio-fase-sinal {
+  position: relative;
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+}
+
+.colegio-fase-sinal::before,
+.colegio-fase-sinal::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 14px;
+  height: 2px;
+  background-color: var(--cor-secundaria);
+  transition: transform 0.15s ease;
+}
+
+/* Fechado: as duas linhas cruzadas (mais). Aberto: giram e viram menos. */
+.colegio-fase-sinal::after {
+  transform: rotate(90deg);
+}
+
+.colegio-fase-botao[aria-expanded="true"] .colegio-fase-sinal::after {
+  transform: rotate(0deg);
+}
+
+/* O painel fechado some da tela; o aberto ganha respiro e linha de leitura */
+.colegio-fase-painel[hidden] {
+  display: none;
+}
+
+.colegio-fase-conteudo {
+  max-width: 68ch;
+  padding-bottom: var(--espaco-md);
+}
+
+/* Linha vertical que marca o texto da fase, ligando o texto ao seu título */
+.colegio-fase-painel:not([hidden]) .colegio-fase-conteudo {
+  border-left: 3px solid var(--cor-secundaria);
+  padding-left: var(--espaco-md);
+}
+
+/* ========== 3. LINHA DO TEMPO ========== */
+
+/* No celular: o trilho ocupa a linha inteira e as duas setas ficam
+   centralizadas logo abaixo dele.
+   No computador (ver seção 6) as setas passam para as laterais do trilho. */
+.colegio-tempo {
+  display: grid;
+  /* As colunas 1 e 4 são iguais e vazias: é o que centraliza as setas */
+  grid-template-columns: 1fr auto auto 1fr;
+  gap: var(--espaco-sm);
+  margin-top: var(--espaco-lg);
+}
+
+/* O trilho: a lista que rola na horizontal */
+.colegio-tempo-lista {
+  position: relative;
+  display: flex;
+  gap: var(--espaco-lg);
+  grid-column: 1 / -1;
+  grid-row: 1;
+  /* min-width:0 é obrigatório: sem isso a coluna estica até a largura dos
+     13 momentos e a página ganha rolagem horizontal */
+  min-width: 0;
+  margin: 0;
+  /* Sem folga nas pontas: a rolagem para exatamente na borda do último
+     momento, sem espaço vazio depois dele */
+  padding: var(--espaco-lg) 0 var(--espaco-sm);
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+
+/* Largura de cada momento: no celular ocupa 68% do trilho (dá para ver o
+   começo do próximo e saber que dá para arrastar); no computador chega a
+   520px. Esse valor é o que garante que NENHUM momento fique fora de
+   alcance das setas em nenhuma largura de tela. */
+.colegio-tempo-item {
+  flex: 0 0 min(520px, 68%);
+  scroll-snap-align: start;
+  padding-top: var(--espaco-md);
+  border-top: 3px solid var(--cor-borda);
+}
+
+/* Número do momento. O guia de estilo permite número porque aqui a sequência
+   é mesmo uma sequência: são 13 momentos em ordem cronológica. */
+.colegio-tempo-marca {
+  margin-bottom: var(--espaco-xs);
+  color: var(--cor-primaria);
+  font-family: var(--fonte-interface);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.colegio-tempo-item h3 {
+  margin-bottom: var(--espaco-sm);
+  font-size: 1.0625rem;
+}
+
+.colegio-tempo-item > p:last-child {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+/* Botão redondo das setas */
+.colegio-tempo-seta {
+  align-self: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--cor-borda);
+  border-radius: 50%;
+  background-color: var(--cor-superficie);
+  color: var(--cor-primaria);
+  font-family: var(--fonte-interface);
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.colegio-tempo-seta-anterior {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.colegio-tempo-seta-proxima {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.colegio-tempo-seta:hover,
+.colegio-tempo-seta:focus-visible {
+  border-color: var(--cor-secundaria);
+  background-color: var(--cor-secundaria);
+  color: var(--cor-fundo);
+}
+
+/* Seta desativada quando já está no primeiro ou no último momento */
+.colegio-tempo-seta:disabled {
+  border-color: var(--cor-borda);
+  background-color: var(--cor-superficie);
+  color: var(--cor-texto-suave);
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* Aviso para leitores de tela: fica fora da tela, mas é lido */
+.colegio-tempo-aviso {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ========== 4. ESTRUTURA ========== */
+
+/* Passa a lista de cursos para dentro do próprio card, sem pular linha */
+.colegio-cartao p:last-child {
+  margin-bottom: 0;
+}
+
+/* Interação do card: ele sobe um pouco e ganha sombra, como uma folha puxada
+   para o alto. A cor do acento da esquerda escurece junto. */
+.colegio-cartao {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.colegio-cartao:hover,
+.colegio-cartao:focus-within {
+  transform: translateY(-3px);
+  border-color: var(--cor-borda);
+  border-left-color: var(--cor-primaria);
+  box-shadow: var(--sombra-card-hover);
+}
+
+/* Endereço e telefone do prédio sede */
+.colegio-endereco {
+  margin-top: var(--espaco-sm);
+  padding-top: var(--espaco-sm);
+  border-top: 1px solid var(--cor-borda);
+  font-style: normal;
+  font-size: 0.95rem;
+}
+
+/* ========== 5. MISSÃO ========== */
+
+.colegio-missao-lista {
+  max-width: 68ch;
+  margin: 0 0 var(--espaco-md);
+  padding-left: var(--espaco-lg);
+}
+
+.colegio-missao-lista li + li {
+  margin-top: var(--espaco-sm);
+}
+
+/* ========== 6. AJUSTES DE TELA ========== */
+
+/* Computador: as setas voltam para as laterais do trilho.
+   O grid-row: 1 é obrigatório: sem ele as setas herdam a linha 2 do celular
+   e ficam embaixo do trilho em vez de ao lado dele. */
+@media (min-width: 768px) {
+  .colegio-tempo {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+
+  .colegio-tempo-lista {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .colegio-tempo-seta-anterior {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+    justify-self: end;
+    margin-top: var(--espaco-lg);
+  }
+
+  .colegio-tempo-seta-proxima {
+    grid-column: 3;
+    grid-row: 1;
+    align-self: start;
+    justify-self: start;
+    margin-top: var(--espaco-lg);
+  }
+}
+
+/* Quem prefere menos movimento não recebe elevação nem troca de cor */
+@media (prefers-reduced-motion: reduce) {
+  .colegio-cartao,
+  .colegio-cartao:hover,
+  .colegio-cartao:focus-within {
+    transform: none;
+    transition: none;
+  }
+
+  .colegio-tempo-lista,
+  .colegio-fase-sinal::before,
+  .colegio-fase-sinal::after {
+    transition: none;
+  }
+}
+
+/* ========== 7. MARCA D'ÁGUA ========== */
+/* O emblema do colégio aparece bem apagado atrás do texto, parado no centro
+   da tela enquanto a página rola por cima dele.
+
+   O seletor usa body[data-pagina="colegio"] para a marca d'água existir só
+   nesta página: as outras equipes não são afetadas.
+
+   O pseudo-elemento é fixed, ou seja, sai do fluxo normal da página. Por isso
+   ele não vira um item do flex do <body> (que é display:flex) e não empurra
+   nenhum conteúdo. */
+body[data-pagina="colegio"]::before {
+  content: "";
+
+  /* Cobre a tela inteira e fica grudado nela durante a rolagem */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Fica atrás de todo o conteúdo e nunca atrapalha o clique */
+  z-index: -1;
+  pointer-events: none;
+
+  /* O emblema, sem distorção e sempre no centro da tela */
+  background-image: url("../../imagens-principais/logo-colegio.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  /* Bem apagado: 7% é o meio da faixa de 5% a 10% */
+  opacity: 0.07;
+
+  /* Tira o amarelo do emblema e suaviza o contraste, para ele virar textura
+     e não imagem colorida */
+  filter: grayscale(20%) contrast(80%);
+
+  /* Esmaece o emblema só nas pontas da tela, deixando o miolo inteiro.
+     O degradê segura a opacidade até 45% e chega a zero em 100%: assim o
+     círculo do emblema aparece completo e não parece cortado.
+     A máscara só olha a parte TRANSPARENTE do degradê; a cor serve apenas
+     para escrever com uma variável do main.css em vez de um valor solto. */
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    var(--cor-texto) 0%,
+    var(--cor-texto) 45%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse at center,
+    var(--cor-texto) 0%,
+    var(--cor-texto) 45%,
+    transparent 100%
+  );
+}

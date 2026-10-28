@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../../imagens-principais/logo-colegio.png">
+  <title>Colégio | Colégio Estadual Barbosa Ferraz</title>
+  <!-- Estilo compartilhado por todas as páginas -->
+  <link rel="stylesheet" href="../../main.css">
+  <!-- Estilo só desta página (equipe Colégio) -->
+  <link rel="stylesheet" href="pagina.css">
+</head>
+<body data-pagina="colegio">
+
+  <!-- O menu é montado pelo arquivo principal main.js -->
+  <div id="menu"></div>
+
+  <main class="container">
+
+    <!-- Abertura da página: um h1 só, como pede o REGRAS.md -->
+    <header class="colegio-abertura">
+      <h1>Colégio Estadual Barbosa Ferraz</h1>
+      <p class="colegio-lead">
+       Mais de seis décadas de ensino público em Ivaiporã, contadas a partir do
+        Grupo Escolar que atendia da 1ª à 4ª série. Nesta página estão a origem
+        do nome, a história da instituição, a linha do tempo, a estrutura do
+        prédio sede e a missão do colégio.
+      </p>
+    </header>
+
+    <!-- Bloco 1: por que o colégio se chama Barbosa Ferraz -->
+    <section id="homenagem" class="colegio-secao">
+      <h2>Quem foi Barbosa Ferraz</h2>
+      <p>
+        A denominação do colégio homenageia Leovegildo Barbosa Ferraz, integrante
+        da família fundadora da Companhia Territorial Sul Brasil, conhecida no
+        começo como Companhia Ubá. Na década de 1940, essa empresa comprou as
+        glebas de terra que hoje compreendem o município de Ivaiporã e organizou o
+        loteamento das propriedades rurais e do patrimônio urbano.
+      </p>
+      <p>
+        Conforme chegavam os migrantes, principalmente paulistas, mineiros,
+        catarinenses gaúchos, para cultivar café e cereais, a cidade pedia cada
+        vez mais infraestrutura. Uma escola de grande porte era essencial para
+        fixar as famílias no núcleo urbano recém-criado. Daí o nome da escola: uma
+        homenagem a um dos fundadores do município.
+      </p>
+    </section>
+
+    <!-- Bloco 2: a história da escola.
+         Cada fase é um botão que abre e fecha o texto correspondente. -->
+    <section id="historia" class="colegio-secao">
+      <h2>História</h2>
+      <p>
+        O Colégio Estadual Barbosa Ferraz teve, em sua existência, várias fases
+        ricas em detalhes que acompanharam o desenvolvimento do município de
+        Ivaiporã, desde sua emancipação política. Abra a fase que quiser ler.
+      </p>
+
+      <div class="colegio-historia">
+
+        <div class="colegio-fase">
+          <h3 class="colegio-fase-titulo">
+            <button type="button" class="colegio-fase-botao" aria-expanded="true"
+                    aria-controls="fase-grupo-escolar">
+              <span>Do Grupo Escolar ao Colégio Estadual</span>
+              <span class="colegio-fase-sinal" aria-hidden="true"></span>
+            </button>
+          </h3>
+          <div class="colegio-fase-painel" id="fase-grupo-escolar">
+            <div class="colegio-fase-conteudo">
+              <p>
+                No início dos anos 60 funcionava neste local o Grupo Escolar
+                Barbosa Ferraz, que ensinava da 1ª à 4ª série. Sua primeira
+                diretora foi a professora Edna Ribeiro, seguida pelas
+                professoras Edith Sobieray, Vera Lima Natel, Neide Vastilho
+                Romero Xavier, Neuza Dionízio da Rocha e Eva Turim.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="colegio-fase">
+          <h3 class="colegio-fase-titulo">
+            <button type="button" class="colegio-fase-botao" aria-expanded="false"
+                    aria-controls="fase-contabilidade">
+              <span>Ensino médio e o primeiro curso de Contabilidade</span>
+              <span class="colegio-fase-sinal" aria-hidden="true"></span>
+            </button>
+          </h3>
+          <div class="colegio-fase-painel" id="fase-contabilidade" hidden>
+            <div class="colegio-fase-conteudo">
+              <p>
+                A Lei nº 2.017, de 15 de setembro de 1960, publicada no DOE em 16
+                de setembro de 1960, no governo de Moysés Lupion, estadualizou o
+                Instituto Ginasial e Comercial Interventor Manoel Ribas. A
+                instituição esperou seis anos até conseguir a autorização para o
+                Curso Técnico em Contabilidade.
+              </p>
+              <p>
+                O pedido saiu em 27 de janeiro de 1967, assinado pelo então
+                vereador Dr. Nelson Sobieray, ao então secretário da Educação e
+                Cultura Dr. Carlos Alberto Moro. A autorização veio pelo Decreto
+                nº 4.088, de 15 de fevereiro de 1967.
+              </p>
+              <p>
+                O curso passou a funcionar no período noturno no estabelecimento
+                denominado Colégio Comercial Estadual Barão de Mauá, no mesmo
+                prédio do Grupo Escolar Barbosa Ferraz. A primeira turma de
+                Contabilidade formou-se em 1970.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="colegio-fase">
+          <h3 class="colegio-fase-titulo">
+            <button type="button" class="colegio-fase-botao" aria-expanded="false"
+                    aria-controls="fase-primeiros-professores">
+              <span>Professores, secretária e estudantes</span>
+              <span class="colegio-fase-sinal" aria-hidden="true"></span>
+            </button>
+          </h3>
+          <div class="colegio-fase-painel" id="fase-primeiros-professores" hidden>
+            <div class="colegio-fase-conteudo">
+              <p>
+                Os primeiros professores foram Rubens Novicki, Geanete Medeiros
+                Novicki, Dr. João Nelson Sobieray, Sidney Ciffoni, Sinésio Zonari,
+                João Maria Rocha, Alcebíades Bruno Barbosa e Manoel Fernandes
+                Silva. O curso de Contabilidade foi o primeiro da região, por isso
+                os alunos vinham de toda a área: São João do Ivaí, Manoel Ribas,
+                Faxinal, Iretama e Jardim Alegre, entre outras cidades.
+              </p>
+              <p>
+                A primeira secretária do Colégio foi a professora Paulina Otília
+                dos Santos Silva, professora padrão efetiva e normalista, que
+                estava lotada no Grupo Escolar Barão do Cerro Azul e deixou o
+                cargo em 27 de junho de 1969 para ocupar a função na Inspetoria
+                Regional de Ensino.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="colegio-fase">
+          <h3 class="colegio-fase-titulo">
+            <button type="button" class="colegio-fase-botao" aria-expanded="false"
+                    aria-controls="fase-direcoes">
+              <span>Direções e mudanças de nome</span>
+              <span class="colegio-fase-sinal" aria-hidden="true"></span>
+            </button>
+          </h3>
+          <div class="colegio-fase-painel" id="fase-direcoes" hidden>
+            <div class="colegio-fase-conteudo">
+              <p>
+                Após a unificação de 1978 e a aprovação do novo nome em 1981, o
+                colégio passou por sucessivas direções: Dione Beatriz de Mello
+                Cardos, Ruth Bergamo dos Reis, Roberto Gallo Nascimento dos
+                Reis, Jair Darienso, Neiva Balbino Gamba, Leonini Garcia Leal,
+                Tércius Gomes Martins, Maria das Graças Rocha de Moraes, Sandra
+                Reis e Arlete Maria Stier Teixeira. Na fase do curso de
+                Contabilidade também dirigiram a escola os professores Sidney
+                Ciffoni, Rubens Novicki, Eneas Ludgero da Silva, Manoel Fernandes
+                Silva e Adail de Oliveira Coelho. Hoje a direção é de Ivan Lopes
+                Mendes.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="colegio-fase">
+          <h3 class="colegio-fase-titulo">
+            <button type="button" class="colegio-fase-botao" aria-expanded="false"
+                    aria-controls="fase-ldb">
+              <span>A LDB de 1996 e os cursos profissionalizantes</span>
+              <span class="colegio-fase-sinal" aria-hidden="true"></span>
+            </button>
+          </h3>
+          <div class="colegio-fase-painel" id="fase-ldb" hidden>
+            <div class="colegio-fase-conteudo">
+              <p>
+                Com a aprovação da nova LDB 9.294/96, o Sistema Estadual de Ensino
+                exigiu a extinção gradativa dos cursos de Contabilidade e
+                Magistério. O Magistério foi mantido em extinção gradativa a
+                partir de 2001 e substituído pelo Curso de Formação de Docentes
+                dos Anos Iniciais do Ensino Fundamental, na modalidade Normal,
+                implantado a partir de 2001 e extinto a partir de 2004. Com a lei,
+                o estabelecimento passou a se chamar Colégio Estadual Barbosa
+                Ferraz — Ensino Fundamental e Médio. Em 2002, com a
+                municipalização do Ensino Fundamental de 1ª à 4ª série, passou a
+                se chamar Colégio Estadual Barbosa Ferraz — Ensino Médio e Normal,
+                pela Resolução nº 1.663/02, publicada no DOE em 20 de junho de 2002.
+              </p>
+              <p>
+                A Resolução nº 2.887/05 do Conselho Estadual de Educação autorizou
+                o Curso de Formação de Docentes da Educação Infantil e dos Anos
+                Iniciais do Ensino Fundamental para egressos do Ensino Fundamental,
+                com turma formada a partir de 2004. Também em 2005, pela Resolução
+                nº 2.886/05, o mesmo curso foi autorizado para egressos do Ensino
+                Médio, com turma formada em 2004.
+              </p>
+              <p>
+                Ainda em 2005 o colégio confirmou sua característica de ofertar
+                cursos profissionalizantes: abriu matrículas para o Curso Técnico
+                em Administração, autorizado e reconhecido pela Resolução
+                nº 1.621/05 para egressos do Ensino Médio. Com essa autorização, o
+                estabelecimento passou a se chamar Colégio Estadual Barbosa Ferraz
+                — Ensino Médio, Normal e Profissional.
+              </p>
+              <p>
+                Em 2006 foram implantados mais cursos profissionalizantes: o Curso
+                Técnico em Secretariado, para egressos do Ensino Fundamental; o
+                Curso de Gestão Escolar e o Curso Técnico em Multimeios, para
+                funcionários da Educação, egressos do Ensino Médio e atuantes no
+                Setor Administrativo; e o Curso Técnico em Meio Ambiente, na forma
+                Integrada, cursado junto com o Ensino Médio, e também na forma
+                Subsequente, para quem já concluiu o segundo grau.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Bloco 3: linha do tempo, para o aluno bater o olho nas datas.
+         A lista rola na horizontal; as duas setas são ligadas pelo JavaScript
+         da página. -->
+    <section id="linha-do-tempo" class="colegio-secao">
+      <h2>Linha do tempo</h2>
+      <p class="colegio-secao-intro">
+        Os principais momentos da escola, do primeiro loteamento da terra ao
+        ensino técnico de hoje. Arraste com o dedo ou use as setas para avançar.
+      </p>
+
+      <!-- No celular o trilho ocupa a linha inteira e as duas setas ficam
+           centralizadas logo abaixo dele. A partir de 768px elas voltam para
+           as laterais do trilho. -->
+      <div class="colegio-tempo">
+        <ol class="colegio-tempo-lista" id="colegio-tempo-lista" tabindex="0">
+
+          <li class="colegio-tempo-item">
+            <p class="colegio-tempo-marca">01</p>
+            <h3>Dez. 1940 — a terra que hoje é Ivaiporã</h3>
+            <p>
+              A Companhia Territorial Sul Brasil compra as glebas da região e
+              organiza o loteamento das propriedades rurais e do patrimônio urbano.
+            </p>
+          </li>
+
+          <li class="colegio-tempo-item">
+            <p class="colegio-tempo-marca">02</p>
+            <h3>Década de 1950 — as primeiras escolas</h3>
+            <p>
+              O ensino no povoado era ministrado em pequenas construções de madeira
+              provisórias. [CONFIRMAR] como eram essas primeiras salas.
+            </p>
+          </li>
+
+          <li class="colegio-tempo-item">
+            <p class="colegio-tempo-marca">03</p>
+            <h3>1960 — o ensino médio chega à cidade</h3>
+            <p>
+              A Lei nº 2.017, de 15 de setembro de 1960, estadualiza o Instituto
+              Ginasial e Comercial Interventor Manoel Ribas, no governo de Moysés
+              Lupion. É o começo do ensino médio na região.
+            </p>
+          </li>
+
+          <li class="colegio-tempo-item">
+            <p class="colegio-tempo-marca">04</p>
+            <h3>Emancipação política de Ivaiporã</h3>
+            <p>
+              A história do colégio acompanha o município desde sua emancipação
+              política. [CONFIRMAR] ano exato da emancipação de Ivaiporã.
+            </p>
+          </li>
+
+          <li class="colegio-tempo-item">
+            <p class="colegio-tempo-marca">05</p>
+            <h3>Década de 1960 e 1970 — o prédio sede</h3>
+            <p>
+              Nas gestões estaduais da época é projetada a estrutura em alvenaria no
+              centro da cidade. O prédio vira marco arquitetônico e símbolo do
+              progresso da então Capital do Café da região.
+            </p>
+          </li>
+
+          <li class="colegio-tempo-item">
+            <p class="colegio-tempo-marca">06</p>
+            <h3>1967 — o Técnico em Contabilidade</h3>
+            <p>
+              O Decreto nº 4.088, de 15 de fevereiro de 1967, autoriza o curso
+              Técnico em Contabilidade no período noturno, no Colégio Comercial
+              Estadual Barão de Mauá, instalado no prédio do Grupo Escolar Barbosa
+              Ferraz.
+            </p>
+          </li>
+
+          <li class="colegio-tempo-item">
+            <p class="colegio-tempo-marca">07</p>
+            <h3>Década de 1970 — o curso normal</h3>
+            <p>
+              Faltavam professores para as dezenas de escolas rurais do Vale do
+              Ivaí. O colégio implanta o Curso Normal de Habilitação ao Magistério e
+              vira a principal fábrica de professores do centro do Paraná.
+              [CONFIRMAR] ano exato da implantação do Curso Normal.
+            </p>
+          </li>
+
+          <li class="colegio-tempo-item">
+            <p class="colegio-tempo-marca">08</p>
+            <h3>1970 — a primeira turma</h3>
+            <p>
+              Forma-se a primeira turma do Curso Técnico em Contabilidade, com
+              alunos vindos de São João do Ivaí, Manoel Ribas, Faxinal, Iretama e
+              Jardim Alegre.
+            </p>
+          </li>
+
+          <li class="colegio-tempo-item">
+            <p class="colegio-tempo-marca">09</p>
+            <h3>1978 e 1981 — unificação e novo nome</h3>
+            <p>
+              Com a unificação de 1978 e a aprovação do novo nome em 1981, nasce o
+              Colégio Estadual Barbosa Ferraz.
+            </p>
+          </li>
+
+          <li class="colegio-tempo-item">
+            <p class="colegio-tempo-marca">10</p>
+            <h3>1996 — a nova LDB</h3>
+            <p>
+              A LDB 9.294/96 determina a extinção gradativa dos cursos de
+              Contabilidade e Magistério e a entrada da Formação de Docentes, na
+              modalidade Normal.
+            </p>
+          </li>
+
+          <li class="colegio-tempo-item">
+            <p class="colegio-tempo-marca">11</p>
+            <h3>2002 — municipalização do Ensino Fundamental</h3>
+            <p>
+              Com a municipalização da 1ª à 4ª série, a Resolução nº 1.663/02 altera
+              o nome para Colégio Estadual Barbosa Ferraz — Ensino Médio e Normal.
+            </p>
+          </li>
+
+          <li class="colegio-tempo-item">
+            <p class="colegio-tempo-marca">12</p>
+            <h3>2005 — Administração e Formação de Docentes</h3>
+            <p>
+              As Resoluções nº 2.886/05 e nº 2.887/05 autorizam o Curso de Formação
+              de Docentes da Educação Infantil e dos Anos Iniciais do Ensino
+              Fundamental, e a Resolução nº 1.621/05 autoriza o Curso Técnico em
+              Administração.
+            </p>
+          </li>
+
+          <li class="colegio-tempo-item">
+            <p class="colegio-tempo-marca">13</p>
+            <h3>2006 — novos cursos profissionalizantes</h3>
+            <p>
+              São implantados os cursos de Secretariado, Gestão Escolar, Multimeios
+              e Meio Ambiente, este último nas formas Integrada e Subsequente.
+            </p>
+          </li>
+        </ol>
+
+        <button type="button" class="colegio-tempo-seta colegio-tempo-seta-anterior"
+                aria-controls="colegio-tempo-lista" aria-label="Momento anterior">
+          <span aria-hidden="true">&#8249;</span>
+        </button>
+
+        <button type="button" class="colegio-tempo-seta colegio-tempo-seta-proxima"
+                aria-controls="colegio-tempo-lista" aria-label="Próximo momento">
+          <span aria-hidden="true">&#8250;</span>
+        </button>
+      </div>
+
+      <!-- Aviso para leitores de tela: fala em qual momento a pessoa está -->
+      <p class="colegio-tempo-aviso" id="colegio-tempo-aviso" role="status" aria-live="polite"></p>
+    </section>
+
+    <!-- Bloco 4: como o colégio é hoje (cartões com as dependências) -->
+    <section id="estrutura" class="colegio-secao">
+      <h2>Estrutura</h2>
+      <p class="colegio-secao-intro">
+        O colégio funciona em um único prédio de alvenaria no centro de Ivaiporã,
+        construído nas gestões estaduais da década de 1960 e 1970.
+      </p>
+      <div class="grade">
+
+        <article class="card colegio-cartao">
+          <h3>Prédio sede</h3>
+          <p>
+            A construção em alvenaria no centro da cidade virou referência
+            arquitetônica de Ivaiporã na época em que o município era chamado de
+            Capital do Café.
+          </p>
+          <!-- Dados reais fornecidos pela secretaria do colégio -->
+          <address class="colegio-endereco">
+            Rua Rio Grande do Sul, 1200 — Centro<br>
+            Ivaiporã — PR, CEP 86870-000<br>
+            Telefone:
+            <a href="tel:+554334725009">(43) 3472-5009</a><br>
+            <!-- [CONFIRMAR] número oficial do WhatsApp. Quando a secretaria
+                 informar, o link fica assim:
+                 <a href="https://wa.me/5543SEUNUMERO">WhatsApp do colégio</a> -->
+            WhatsApp: [CONFIRMAR] número oficial do colégio
+          </address>
+        </article>
+
+        <article class="card colegio-cartao">
+          <h3>Ensinos oferecidos</h3>
+          <p>
+            Ensino Médio, Curso de Formação de Docentes da Educação Infantil e dos
+            Anos Iniciais do Ensino Fundamental, e cursos técnicos nas formas
+            Integrada e Subsequente.
+          </p>
+          <p>
+            <a href="../cursos/index.html">Veja a lista completa de cursos</a>, com
+            duração, modalidade e período de cada um.
+          </p>
+        </article>
+
+        <article class="card colegio-cartao">
+          <h3>Espaços de uso dos alunos</h3>
+          <p>
+            [CONFIRMAR] salas de aula, biblioteca, laboratórios de informática,
+            quadra, ginásio, cantina, secretaria e sala dos professores. Confirmar
+            também se o prédio tem acessibilidade para pessoas com deficiência.
+          </p>
+        </article>
+
+        <article class="card colegio-cartao">
+          <h3>Público atendido</h3>
+          <p>
+            Além dos alunos de Ivaiporã, a escola recebe estudantes de São João do
+            Ivaí, Manoel Ribas, Faxinal, Iretama, Jardim Alegre e de outras cidades
+            do Vale do Ivaí.
+          </p>
+          <p>Quantidade de alunos por turno: [CONFIRMAR] número de alunos.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Bloco 5: a missão da escola -->
+    <section id="missao" class="colegio-secao">
+      <h2>Missão</h2>
+      <p>
+        A história do colégio resume sua missão: formar pessoas em Ivaiporã e no
+        Vale do Ivaí. Durante décadas foi a principal fábrica de professores da
+        região e continua oferecendo ensino médio e profissional para os jovens da
+        cidade e das cidades vizinhas.
+      </p>
+      <ul class="colegio-missao-lista">
+        <li>
+          Levar o ensino público estadual a um município que nasceu junto com a
+          Companhia Territorial Sul Brasil.
+        </li>
+        <li>
+          Formar professores para as escolas da região, papel que o colégio exerceu
+          com o Curso Normal e que continua na Formação de Docentes.
+        </li>
+        <li>
+          Oferecer formação profissional para a região, com cursos técnicos que
+          mudam conforme as necessidades do trabalho.
+        </li>
+      </ul>
+      <p>
+        [CONFIRMAR] o texto oficial da missão institucional do Colégio Estadual
+        Barbosa Ferraz, no site da Secretaria de Estado da Educação do Paraná, para
+        substituir este resumo.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- O rodapé é montado pelo arquivo principal main.js -->
+  <div id="rodape"></div>
+
+  <!-- Primeiro os comportamentos globais, depois o JavaScript desta página -->
+  <script src="../../main.js"></script>
+  <script src="pagina.js"></script>
+</body>
+</html>

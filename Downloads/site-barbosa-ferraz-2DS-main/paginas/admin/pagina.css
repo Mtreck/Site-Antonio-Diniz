@@ -1,0 +1,156 @@
+/*
+  Estilos da Área Administrativa
+  Classes com prefixo "admin-"
+  Utiliza somente variáveis globais do main.css
+*/
+
+.admin-secao {
+  padding-top: var(--espaco-xl);
+  padding-bottom: var(--espaco-xl);
+  background-color: var(--cor-fundo-suave);
+  min-height: calc(100vh - 280px);
+  display: flex;
+  align-items: center;
+}
+
+.admin-container {
+  display: flex;
+  justify-content: center;
+}
+
+.admin-card {
+  width: 100%;
+  max-width: 500px;
+  background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-top: 5px solid var(--cor-primaria);
+  border-radius: var(--raio);
+  padding: var(--espaco-xl) var(--espaco-lg);
+  box-shadow: var(--sombra-card-hover);
+}
+
+.admin-card-cabecalho {
+  text-align: center;
+  margin-bottom: var(--espaco-lg);
+}
+
+.admin-titulo {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-profunda);
+  font-size: 1.75rem;
+  margin-bottom: var(--espaco-xs);
+}
+
+.admin-descricao {
+  color: var(--cor-texto-suave);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+.admin-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-md);
+}
+
+.admin-campo-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-xs);
+}
+
+.admin-label {
+  font-weight: 600;
+  color: var(--cor-profunda);
+  font-size: 1rem;
+}
+
+.admin-input {
+  width: 100%;
+  padding: var(--espaco-sm) var(--espaco-md);
+  font-family: var(--fonte-texto);
+  font-size: 1rem;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+  border: 2px solid var(--cor-borda);
+  border-radius: var(--raio);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-input:focus {
+  outline: none;
+  border-color: var(--cor-secundaria);
+  box-shadow: 0 0 0 3px rgba(42, 101, 207, 0.2);
+}
+
+.admin-botao {
+  width: 100%;
+  padding: var(--espaco-sm) var(--espaco-md);
+  margin-top: var(--espaco-xs);
+}
+
+/* Área de mensagens acessíveis */
+.admin-mensagem {
+  font-size: 0.9rem;
+  min-height: 20px;
+  text-align: center;
+}
+
+.admin-mensagem-erro {
+  color: #c0392b;
+  font-weight: 600;
+  padding: var(--espaco-xs) var(--espaco-sm);
+  background-color: rgba(192, 57, 43, 0.08);
+  border-radius: var(--raio);
+}
+
+/* Painel de Sucesso */
+.admin-painel-conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-lg);
+}
+
+.admin-aviso-sucesso {
+  background-color: var(--cor-fundo-suave);
+  border-left: 4px solid var(--cor-secundaria);
+  padding: var(--espaco-md);
+  border-radius: var(--raio);
+}
+
+.admin-aviso-sucesso p {
+  margin-bottom: var(--espaco-xs);
+  color: var(--cor-profunda);
+}
+
+.admin-aviso-sucesso p:last-child {
+  margin-bottom: 0;
+  color: var(--cor-texto-suave);
+}
+
+.admin-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-md);
+  justify-content: center;
+}
+
+.admin-oculto {
+  display: none !important;
+}
+
+@media (max-width: 480px) {
+  .admin-secao {
+    padding-top: var(--espaco-lg);
+    padding-bottom: var(--espaco-lg);
+  }
+
+  .admin-card {
+    padding: var(--espaco-lg) var(--espaco-md);
+  }
+
+  .admin-acoes .botao {
+    width: 100%;
+    text-align: center;
+  }
+}

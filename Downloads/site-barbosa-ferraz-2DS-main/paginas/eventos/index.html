@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../../imagens-principais/logo-colegio.png">
+  <title>Eventos | Colégio Estadual Barbosa Ferraz</title>
+  <!-- Estilo compartilhado por todas as páginas -->
+  <link rel="stylesheet" href="../../main.css">
+  <!-- Estilo só desta página (equipe Eventos) -->
+  <link rel="stylesheet" href="pagina.css">
+</head>
+<body data-pagina="eventos">
+
+  <!-- O menu é montado pelo arquivo principal main.js -->
+  <div id="menu"></div>
+
+  <main>
+    <!-- ===== Abertura: a palavra "Eventos" em destaque sobre a faixa azul ===== -->
+    <section class="eventos-abertura">
+      <div class="container eventos-abertura-conteudo">
+        <h1 class="eventos-titulo">Eventos</h1>
+      </div>
+    </section>
+
+    <!-- ===== Apresentação do ano letivo, num cartão branco sobre a faixa azul ===== -->
+    <div class="container">
+      <div class="card eventos-apresentacao">
+        <p>
+          Agora os eventos ocorridos no Barbosa Ferraz durante todo o ano letivo está
+          registrados em nosso site! Você pode acompanhar o calendário de eventos e
+          comemorações abaixo, temos aqui não só eventos semanais, mas os anuais,
+          como o seminário, que envolve todos os cursos de nosso colégio que, além
+          dos alunos puderem participar das palestras por um preço muito acessível,
+          a fim de enriquecer o conhecimento e habilidade em diversas áreas que todo
+          o mercado de trabalho exige atualmente. Isto não é nem o começo! Tem muita
+          festa que acontece no Barbosa e aqui estão algumas delas.
+        </p>
+      </div>
+    </div>
+
+    <!-- ===== Eventos que se repetem toda semana ===== -->
+    <!-- Os cards são gerados pelo pagina.js a partir da lista de eventos semanais -->
+    <section class="eventos-secao" aria-labelledby="eventos-semana-titulo">
+      <div class="container">
+        <h2 class="eventos-secao-titulo" id="eventos-semana-titulo">Eventos semanais</h2>
+        <p class="eventos-secao-texto">
+          Acontecem todas as semanas, durante o ano letivo.
+        </p>
+        <ul class="grade eventos-grade" id="eventos-lista-semanal"></ul>
+      </div>
+    </section>
+
+    <!-- ===== Eventos de data marcada, uma vez por ano ===== -->
+    <section class="eventos-secao eventos-secao-anual" aria-labelledby="eventos-ano-titulo">
+      <div class="container">
+        <h2 class="eventos-secao-titulo" id="eventos-ano-titulo">Eventos anuais</h2>
+        <p class="eventos-secao-texto">
+          São os grandes eventos do calendário do colégio.
+        </p>
+        <ul class="grade eventos-grade eventos-grade-anual" id="eventos-lista-anual"></ul>
+      </div>
+    </section>
+
+    <!-- ===== Encerramento: onde pedir mais informações ===== -->
+    <div class="container eventos-fechamento">
+      <div class="card eventos-encerramento">
+        <h2 class="eventos-secao-titulo">Ficou de fora?</h2>
+        <p class="eventos-encerramento-texto">
+          Este site reúne os eventos já confirmados pela escola. Datas, horários e
+          inscrições ainda não publicados ficam com a secretaria do colégio.
+        </p>
+        <a class="botao eventos-botao" href="../contato/index.html">Ver canais de contato do colégio</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- O rodapé é montado pelo arquivo principal main.js -->
+  <div id="rodape"></div>
+
+  <!-- Primeiro os comportamentos globais, depois o JavaScript desta página -->
+  <script src="../../main.js"></script>
+  <script src="pagina.js"></script>
+</body>
+</html>

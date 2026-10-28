@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="E-mail">
+  <defs><linearGradient id="mailBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#24c5f4"/><stop offset="1" stop-color="#007ac7"/></linearGradient><filter id="mailShadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-color="#064a82" flood-opacity=".2"/></filter></defs>
+  <circle cx="64" cy="64" r="60" fill="url(#mailBg)"/>
+  <circle cx="64" cy="64" r="53" fill="none" stroke="#fff" stroke-opacity=".17" stroke-width="1.5"/>
+  <g filter="url(#mailShadow)">
+    <rect x="25" y="37" width="78" height="56" rx="8" fill="#fff"/>
+    <path d="M29 43.5 64 70 99 43.5" fill="none" stroke="#078bc9" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M29 86 49 67M99 86 79 67" fill="none" stroke="#d3f4ff" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>

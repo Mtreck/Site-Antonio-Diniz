@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../../imagens-principais/logo-colegio.png">
+  <title>Cursos | Colégio Estadual Barbosa Ferraz</title>
+  <!-- Estilo compartilhado por todas as páginas -->
+  <link rel="stylesheet" href="../../main.css">
+  <!-- Estilo só desta página (equipe Cursos) -->
+  <link rel="stylesheet" href="pagina.css">
+</head>
+<body data-pagina="cursos">
+
+  <!-- O menu é montado pelo arquivo principal main.js -->
+  <div id="menu"></div>
+
+  <main>
+
+    <!-- ===== Apresentação: o que é esta página ===== -->
+    <!-- Não tem título próprio: o título principal da página fica no catálogo, logo abaixo -->
+    <section class="cursos-apresentacao" aria-label="Apresentação">
+      <div class="container">
+        <p class="cursos-apresentacao-texto">
+          O Colégio Estadual Barbosa Ferraz oferece sete cursos: um curso de Ensino
+          Médio, três cursos técnicos integrados e três cursos técnicos
+          subsequentes. Todos estão em funcionamento e os dados de cada um estão
+          no catálogo desta página.
+        </p>
+        <!-- [CONFIRMAR] a secretaria precisa informar o período de matrículas
+             e o canal oficial de inscrição -->
+        <p class="cursos-apresentacao-destaque">
+          <strong>Novas turmas e inscrições:</strong>
+          [CONFIRMAR] datas de matrícula e onde fazer a inscrição.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Catálogo com os 7 cursos (título da página) ===== -->
+    <section class="cursos-catalogo" aria-labelledby="cursos-catalogo-titulo">
+      <div class="container">
+
+        <h1 id="cursos-catalogo-titulo">Cursos</h1>
+        <p class="cursos-secao-texto">
+          Catálogo dos sete cursos em funcionamento. Cada curso informa a duração,
+          a modalidade e o período em que as aulas acontecem. Toque em um card
+          para abrir a explicação completa do curso.
+        </p>
+
+        <!-- Filtro por modalidade: o pagina.js mostra e esconde os cards -->
+        <div class="cursos-filtros">
+          <p class="cursos-filtros-rotulo" id="cursos-filtros-rotulo">
+            Filtrar por modalidade
+          </p>
+          <div class="cursos-filtros-botoes" role="group" aria-labelledby="cursos-filtros-rotulo">
+            <button type="button" class="botao cursos-filtro" data-modalidade="Todas" aria-pressed="true">
+              Todas
+            </button>
+            <button type="button" class="botao cursos-filtro" data-modalidade="Normal" aria-pressed="false">
+              Normal
+            </button>
+            <button type="button" class="botao cursos-filtro" data-modalidade="Integrado" aria-pressed="false">
+              Integrado
+            </button>
+            <button type="button" class="botao cursos-filtro" data-modalidade="Subsequente" aria-pressed="false">
+              Subsequente
+            </button>
+          </div>
+          <!-- O JavaScript escreve aqui quantos cursos estão aparecendo -->
+          <p class="cursos-contagem" id="cursos-contagem" role="status"></p>
+        </div>
+
+        <!-- Os 7 cards são gerados pelo pagina.js a partir da lista de cursos -->
+        <ul class="grade cursos-lista" id="lista-cursos"></ul>
+
+        <!-- Aparece só se nenhum curso combinar com a modalidade escolhida -->
+        <p class="cursos-vazio" id="cursos-vazio" hidden>
+          Nenhum curso nessa modalidade no momento.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== O que significa cada modalidade ===== -->
+    <section class="cursos-modalidades" aria-labelledby="cursos-modalidades-titulo">
+      <div class="container">
+        <h2 id="cursos-modalidades-titulo">Quais são as modalidades</h2>
+        <p class="cursos-secao-texto">
+          A modalidade diz como o curso é ligado ao Ensino Médio. São três tipos,
+          definidos pelo Ministério da Educação. É essa informação que aparece em
+          cada card do catálogo, acima.
+        </p>
+
+        <div class="grade cursos-modalidades-grade">
+          <article class="card cursos-modalidade">
+            <h3 class="cursos-modalidade-nome">Normal</h3>
+            <p>
+              O curso acontece sozinho, separado do Ensino Médio técnico. O
+              estudante cursa só a disciplina e recebe o certificado ao final.
+            </p>
+          </article>
+
+          <article class="card cursos-modalidade">
+            <h3 class="cursos-modalidade-nome">Integrado</h3>
+            <p>
+              O curso técnico e o Ensino Médio acontecem juntos, na mesma escola e
+              no mesmo horário. O estudante recebe os dois certificados ao final.
+            </p>
+          </article>
+
+          <article class="card cursos-modalidade">
+            <h3 class="cursos-modalidade-nome">Subsequente</h3>
+            <p>
+              É para quem já terminou o Ensino Médio. O estudante entra depois e
+              cursa só a parte técnica.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Como se inscrever ===== -->
+    <section class="cursos-inscricao" aria-labelledby="cursos-inscricao-titulo">
+      <div class="container">
+        <h2 id="cursos-inscricao-titulo">Como se inscrever</h2>
+        <p class="cursos-secao-texto">
+          O processo é o mesmo para os sete cursos e passa por estas etapas.
+        </p>
+
+        <ol class="cursos-passos">
+          <li class="cursos-passo">
+            <h3 class="cursos-passo-nome">1. Escolher o curso</h3>
+            <p>
+              Veja no catálogo qual curso e qual período combinam com a sua
+              disponibilidade de horários.
+            </p>
+          </li>
+          <li class="cursos-passo">
+            <h3 class="cursos-passo-nome">2. Reunir os documentos</h3>
+            <p>
+              <!-- [CONFIRMAR] a lista de documentos pode mudar por curso -->
+              [CONFIRMAR] lista de documentos exigidos para a matrícula.
+            </p>
+          </li>
+          <li class="cursos-passo">
+            <h3 class="cursos-passo-nome">3. Fazer a inscrição</h3>
+            <p>
+              <!-- [CONFIRMAR] falta confirmar o local e o prazo -->
+              [CONFIRMAR] onde e até quando a inscrição é feita.
+            </p>
+          </li>
+          <li class="cursos-passo">
+            <h3 class="cursos-passo-nome">4. Confirmar a vaga</h3>
+            <p>
+              <!-- [CONFIRMAR] número de vagas por turma não informado ainda -->
+              [CONFIRMAR] data e forma de divulgação da lista de aprovados.
+            </p>
+          </li>
+        </ol>
+
+        <!-- Dúvidas vão para a página da equipe Contato -->
+        <p class="cursos-inscricao-fim">
+          Ainda com dúvida? <a href="../contato/index.html">Fale com a secretaria pela página de contato</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Modal: a explicação completa de cada curso ===== -->
+    <!-- Fica escondido no código. O pagina.js preenche os textos e abre com showModal() -->
+    <dialog class="cursos-modal" id="cursos-modal" aria-labelledby="cursos-modal-titulo">
+      <div class="cursos-modal-caixa">
+        <!-- Topo: nome do curso e botão de fechar -->
+        <div class="cursos-modal-topo">
+          <h2 class="cursos-modal-titulo" id="cursos-modal-titulo"></h2>
+          <button type="button" class="cursos-modal-fechar" id="cursos-modal-fechar">
+            Fechar
+          </button>
+        </div>
+
+        <!-- Resumo do curso -->
+        <p class="cursos-modal-resumo" id="cursos-modal-resumo"></p>
+
+        <!-- Duração, modalidade, período e vagas -->
+        <ul class="cursos-modal-dados" id="cursos-modal-dados"></ul>
+
+        <!-- Bloco "O que você vai aprender". some nos cursos sem lista -->
+        <div class="cursos-modal-topicos-bloco" id="cursos-modal-topicos-bloco">
+          <h3 class="cursos-modal-subtitulo">O que você vai aprender</h3>
+          <ul class="cursos-modal-topicos" id="cursos-modal-topicos"></ul>
+        </div>
+
+        <!-- Aviso honesto: o texto ainda não foi validado pela secretaria -->
+        <p class="cursos-modal-aviso">
+          Texto descritivo de referência, ainda em validação pela secretaria.
+        </p>
+      </div>
+    </dialog>
+
+  </main>
+
+  <!-- O rodapé é montado pelo arquivo principal main.js -->
+  <div id="rodape"></div>
+
+  <!-- Primeiro os comportamentos globais, depois o JavaScript desta página -->
+  <script src="../../main.js"></script>
+  <script src="pagina.js"></script>
+</body>
+</html>

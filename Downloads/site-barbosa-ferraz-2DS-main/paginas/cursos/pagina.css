@@ -1,0 +1,398 @@
+/*
+  Estilo da página Cursos
+  Equipe: Cursos
+  Somente a equipe Cursos edita este arquivo.
+  Classes desta página começam com "cursos-" (ex.: .cursos-card-nome).
+
+  Regras de ouro deste arquivo:
+  - nada de cor em hexadecimal: use as variáveis do main.css;
+  - nada de !important;
+  - reaproveite .container, .card, .grade e .botao antes de criar algo novo.
+*/
+
+/* ========== 1. APRESENTAÇÃO ========== */
+
+.cursos-apresentacao {
+  padding-bottom: var(--espaco-lg);
+  background-color: var(--cor-fundo-suave);
+}
+
+/* Parágrafo de abertura: largura confortável para o texto não ficar largo demais */
+.cursos-apresentacao-texto,
+.cursos-secao-texto {
+  max-width: 70ch;
+  color: var(--cor-texto);
+}
+
+/* Destaque com a borda azul da esquerda: é o que chama o olho para as inscrições */
+.cursos-apresentacao-destaque {
+  max-width: 70ch;
+  margin-top: var(--espaco-md);
+  padding: var(--espaco-md);
+  border-left: 4px solid var(--cor-destaque);
+  border-radius: var(--raio);
+  background-color: var(--cor-superficie);
+  box-shadow: var(--sombra-card);
+}
+
+/* ========== 2. MODALIDADES ========== */
+
+/* Fundo cinza-claro: separa esta seção do catálogo e da inscrição, em branco */
+.cursos-modalidades {
+  padding-top: var(--espaco-xl);
+  padding-bottom: var(--espaco-xl);
+  background-color: var(--cor-fundo-suave);
+}
+
+.cursos-modalidade {
+  height: 100%;
+}
+
+.cursos-modalidade-nome {
+  color: var(--cor-primaria);
+  font-size: 1.1rem;
+}
+
+.cursos-modalidade p {
+  margin-bottom: 0;
+  color: var(--cor-texto);
+}
+
+/* ========== 3. CATÁLOGO ========== */
+
+/* Fundo branco: separa o catálogo da apresentação, que vem em cinza-claro */
+.cursos-catalogo {
+  padding-top: var(--espaco-lg);
+  padding-bottom: var(--espaco-xl);
+}
+
+/* A .grade do main.css já dá as colunas; a lista é usada só para tirar o
+   marcador de lista e alinhar os cards pelo topo */
+.cursos-lista {
+  margin-top: var(--espaco-lg);
+  list-style: none;
+  align-items: start;
+}
+
+/* position: relative permite que o botão "Ver detalhes" cubra o card inteiro */
+.cursos-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: box-shadow 0.2s ease, border-left-color 0.2s ease;
+}
+
+/* O filtro usa o atributo hidden do JavaScript. Como o card tem display:flex
+   (que ganha do padrão do navegador), o "none" precisa ser escrito aqui. */
+.cursos-card[hidden] {
+  display: none;
+}
+
+/* Interação: a sombra cresce e a faixa azul fica mais forte */
+.cursos-card:hover {
+  box-shadow: var(--sombra-card-hover);
+  border-left-color: var(--cor-profunda);
+}
+
+/* Área da imagem: altura fixa para os cards ficarem iguais na mesma linha.
+   Os desenhos dos cursos são redondos e cabem inteiro aqui, sem cortar. */
+.cursos-card-imagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
+  margin-bottom: var(--espaco-md);
+}
+
+/* Imagem real: cabe inteira na área, sem cortar nem distorcer */
+.cursos-card-imagem img {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Aviso que aparece se o arquivo de imagem for apagado */
+.cursos-card-aviso {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background-color: var(--cor-fundo-suave);
+  color: var(--cor-texto-suave);
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+
+.cursos-card-nome {
+  color: var(--cor-profunda);
+  font-size: 1.1rem;
+}
+
+.cursos-card-dados {
+  margin-bottom: var(--espaco-md);
+  font-size: 0.95rem;
+}
+
+/* Item de dado com o nome em negrito. Vale para o card e para o modal */
+.cursos-dado {
+  color: var(--cor-texto-suave);
+}
+
+.cursos-dado strong {
+  color: var(--cor-profunda);
+}
+
+.cursos-dado + .cursos-dado {
+  margin-top: var(--espaco-xs);
+}
+
+/* Botão "Ver detalhes": fica no fim do card porque o margin-top: auto
+   empurra ele para baixo e deixa todos os cards com a mesma altura */
+.cursos-card-abrir {
+  margin-top: auto;
+  padding: var(--espaco-sm) var(--espaco-md);
+  border: 1px solid var(--cor-secundaria);
+  border-radius: var(--raio);
+  background-color: transparent;
+  color: var(--cor-secundaria);
+  font-family: var(--fonte-texto);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* O ::after cobre o card inteiro: clicar em qualquer parte abre o modal */
+.cursos-card-abrir::after {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--raio);
+  content: "";
+}
+
+/* Ao passar no card, a ação fica preenchida: mostra onde o clique leva */
+.cursos-card:hover .cursos-card-abrir,
+.cursos-card-abrir:focus-visible {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-fundo);
+}
+
+/* Aviso de "nenhum curso nessa modalidade" */
+.cursos-vazio {
+  margin-top: var(--espaco-lg);
+  padding: var(--espaco-md);
+  border-radius: var(--raio);
+  background-color: var(--cor-fundo-suave);
+  color: var(--cor-texto-suave);
+  text-align: center;
+}
+
+/* ========== 4. FILTRO POR MODALIDADE ========== */
+
+.cursos-filtros {
+  margin-top: var(--espaco-lg);
+  padding: var(--espaco-md);
+  border-radius: var(--raio);
+  background-color: var(--cor-fundo-suave);
+}
+
+.cursos-filtros-rotulo {
+  margin-bottom: var(--espaco-sm);
+  color: var(--cor-profunda);
+  font-weight: 700;
+}
+
+/* Botões com flexbox: quebram de linha sozinhos quando não cabem na tela */
+.cursos-filtros-botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-sm);
+}
+
+/* Botão escolhido: fundo azul escuro e texto branco */
+.cursos-filtro.ativo {
+  background-color: var(--cor-profunda);
+  border-color: var(--cor-profunda);
+  color: var(--cor-fundo);
+}
+
+.cursos-contagem {
+  margin-top: var(--espaco-sm);
+  margin-bottom: 0;
+  color: var(--cor-texto-suave);
+  font-size: 0.9rem;
+}
+
+/* ========== 5. INSCRIÇÃO ========== */
+
+.cursos-inscricao {
+  padding-top: var(--espaco-xl);
+  padding-bottom: var(--espaco-xl);
+}
+
+.cursos-passos {
+  margin-top: var(--espaco-md);
+  padding-left: var(--espaco-lg);
+}
+
+.cursos-passo {
+  margin-bottom: var(--espaco-md);
+}
+
+.cursos-passo-nome {
+  margin-bottom: var(--espaco-xs);
+  color: var(--cor-primaria);
+  font-size: 1.05rem;
+}
+
+.cursos-passo p {
+  margin-bottom: 0;
+  color: var(--cor-texto);
+}
+
+.cursos-inscricao-fim {
+  margin-top: var(--espaco-lg);
+  padding-top: var(--espaco-md);
+  border-top: 1px solid var(--cor-borda);
+  color: var(--cor-texto);
+}
+
+/* ========== 6. MODAL DE DETALHES ========== */
+
+/* O <dialog> vem fechado no código; o JavaScript abre com showModal().
+   inset: 0 com margin: auto é o que centraliza a janela na tela inteira. */
+.cursos-modal {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: min(760px, calc(100% - 2 * var(--espaco-md)));
+  max-height: 88vh;
+  padding: 0;
+  border: 0;
+  border-radius: var(--raio);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  box-shadow: var(--sombra);
+}
+
+/* Fundo escurecido atrás da janela. A cor vem de uma variável e a
+   transparência vem do opacity, para não escrever cor em hexadecimal */
+.cursos-modal::backdrop {
+  background-color: var(--cor-profunda);
+  opacity: 0.85;
+}
+
+.cursos-modal-caixa {
+  padding: var(--espaco-xl);
+}
+
+/* Topo: nome do curso à esquerda, botão de fechar à direita */
+.cursos-modal-topo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--espaco-sm);
+  margin-bottom: var(--espaco-md);
+}
+
+.cursos-modal-titulo {
+  margin-bottom: 0;
+  color: var(--cor-primaria);
+  font-size: 1.6rem;
+}
+
+.cursos-modal-fechar {
+  padding: var(--espaco-xs) var(--espaco-md);
+  border: 1px solid var(--cor-secundaria);
+  border-radius: var(--raio);
+  background-color: transparent;
+  color: var(--cor-secundaria);
+  font-family: var(--fonte-texto);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cursos-modal-fechar:hover,
+.cursos-modal-fechar:focus-visible {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-fundo);
+}
+
+.cursos-modal-resumo {
+  margin-bottom: var(--espaco-md);
+}
+
+.cursos-modal-dados {
+  margin-bottom: var(--espaco-md);
+  padding: var(--espaco-md);
+  border-radius: var(--raio);
+  background-color: var(--cor-fundo-suave);
+}
+
+.cursos-modal-subtitulo {
+  color: var(--cor-profunda);
+  font-size: 1.05rem;
+}
+
+/* Marcadores da lista de tópicos */
+.cursos-modal-topicos {
+  padding-left: var(--espaco-lg);
+}
+
+.cursos-modal-topicos li + li {
+  margin-top: var(--espaco-xs);
+}
+
+/* Aviso de texto em validação, bem discreto no fim da janela */
+.cursos-modal-aviso {
+  margin-top: var(--espaco-lg);
+  margin-bottom: 0;
+  padding-top: var(--espaco-sm);
+  border-top: 1px solid var(--cor-fundo-suave);
+  color: var(--cor-texto-suave);
+  font-size: 0.8rem;
+}
+
+/* ========== 7. AJUSTES DE TELA ========== */
+
+/* Computador: três colunas de cards */
+@media (min-width: 900px) {
+  .cursos-lista {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Celular: menos respiro e botões de filtro ocupando a linha */
+@media (max-width: 480px) {
+  .cursos-catalogo,
+  .cursos-modalidades,
+  .cursos-inscricao {
+    padding-top: var(--espaco-lg);
+    padding-bottom: var(--espaco-lg);
+  }
+
+  .cursos-filtros-botoes .cursos-filtro {
+    flex: 1 1 auto;
+  }
+
+  .cursos-passos {
+    padding-left: var(--espaco-md);
+  }
+
+  /* Modal quase do tamanho da tela: sobra pouco espaço para o fundo escuro */
+  .cursos-modal-caixa {
+    padding: var(--espaco-md);
+  }
+}
+
+/* Quem prefere menos movimento não recebe a troca de sombra */
+@media (prefers-reduced-motion: reduce) {
+  .cursos-card,
+  .cursos-card:hover,
+  .cursos-card-abrir {
+    transition: none;
+  }
+}

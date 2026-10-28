@@ -1,0 +1,86 @@
+/*
+  Estilo da página Downloads
+  Equipe: Downloads
+  Somente a equipe Downloads edita este arquivo.
+  Use apenas as variáveis de main.css (nada de cor em hexadecimal).
+  Classes desta página começam com "downloads-" (ex.: .downloads-card).
+*/
+
+/* ========== 1. CABEÇALHO DA SEÇÃO ========== */
+
+.downloads-header {
+  margin-bottom: var(--espaco-lg);
+  max-width: 70ch;
+}
+
+/* Tira o espaço extra do último parágrafo antes da grade */
+.downloads-header p:last-child {
+  margin-bottom: 0;
+}
+
+/* ========== 2. GRADE DE CARDS ========== */
+
+/* Computador: 5 cards por linha */
+.downloads-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--espaco-md);
+}
+
+/* ========== 3. CARD ========== */
+
+/* Card de tamanho uniforme: ícone no topo, título no meio e botão embaixo */
+.downloads-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-md);
+  padding: var(--espaco-md);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  background-color: var(--cor-superficie);
+  text-align: center;
+}
+
+/* Ícone ilustrativo no topo do card */
+.downloads-icone {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+/* Título centralizado, podendo ocupar mais de uma linha */
+.downloads-card-titulo {
+  font-size: 1.0625rem;
+  color: var(--cor-profunda);
+  margin-bottom: 0;
+}
+
+/* Botão "Acessar" alinhado na largura do card */
+.downloads-botao {
+  width: 100%;
+  text-align: center;
+}
+
+/* ========== 4. RESPONSIVIDADE ========== */
+
+/* Tablet: 3 cards por linha */
+@media (max-width: 900px) {
+  .downloads-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Celular: 2 cards por linha */
+@media (max-width: 640px) {
+  .downloads-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Celular pequeno: 1 card por linha (cabe em 360px sem rolagem lateral) */
+@media (max-width: 420px) {
+  .downloads-grid {
+    grid-template-columns: 1fr;
+  }
+}

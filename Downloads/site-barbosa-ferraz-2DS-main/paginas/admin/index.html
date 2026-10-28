@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../../imagens-principais/logo-colegio.png">
+  <title>Área Administrativa | Colégio Estadual Barbosa Ferraz</title>
+
+  <!-- Estilo compartilhado por todas as páginas -->
+  <link rel="stylesheet" href="../../main.css">
+  <!-- Estilo específico da Área Administrativa -->
+  <link rel="stylesheet" href="pagina.css">
+</head>
+<body data-pagina="admin">
+
+  <!-- O menu é montado pelo arquivo principal main.js -->
+  <div id="menu"></div>
+
+  <main>
+    <section class="admin-secao">
+      <div class="container admin-container">
+        <!-- Tela de Login / Validação de Acesso -->
+        <div class="admin-card" id="painel-login">
+          <header class="admin-card-cabecalho">
+            <h1 class="admin-titulo">Área Administrativa</h1>
+            <p class="admin-descricao">
+              Acesso restrito para gestão e atualização das informações escolares.
+            </p>
+          </header>
+
+          <form class="admin-formulario" id="form-login" novalidate>
+            <!-- Pergunta de segurança obrigatória -->
+            <div class="admin-campo-grupo">
+              <label class="admin-label" for="campo-resposta">
+                O aluno mais bonito de todo o colégio
+              </label>
+              <input
+                type="password"
+                id="campo-resposta"
+                name="resposta"
+                class="admin-input"
+                placeholder="Digite a resposta"
+                autocomplete="off"
+                required
+              >
+            </div>
+
+            <!-- Área de mensagem de erro ou orientação com leitor de tela -->
+            <div
+              id="mensagem-status"
+              class="admin-mensagem"
+              role="alert"
+              aria-live="polite"
+            ></div>
+
+            <button type="submit" class="botao admin-botao" id="botao-entrar">
+              Entrar
+            </button>
+          </form>
+        </div>
+
+        <!-- Painel Inicial Administrativo (apresentado após acesso válido) -->
+        <div class="admin-card admin-oculto" id="painel-sucesso">
+          <header class="admin-card-cabecalho">
+            <h1 class="admin-titulo">Painel Administrativo</h1>
+            <p class="admin-descricao">
+              Acesso realizado com sucesso. Bem-vindo à área de administração.
+            </p>
+          </header>
+
+          <div class="admin-painel-conteudo">
+            <div class="admin-aviso-sucesso">
+              <p><strong>Sessão ativa:</strong> Você está conectado à Área Administrativa do Colégio Estadual Barbosa Ferraz.</p>
+              <p>As ferramentas de gestão serão integradas conforme as solicitações da equipe escolar.</p>
+            </div>
+
+            <div class="admin-acoes">
+              <button type="button" class="botao botao-secundario" id="botao-sair">
+                Encerrar Acesso
+              </button>
+              <a class="botao" href="../inicio/index.html">
+                Voltar para o Início
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- O rodapé é montado pelo arquivo principal main.js -->
+  <div id="rodape"></div>
+
+  <!-- Primeiro os comportamentos globais, depois o JavaScript desta página -->
+  <script src="../../main.js"></script>
+  <script src="pagina.js"></script>
+</body>
+</html>
