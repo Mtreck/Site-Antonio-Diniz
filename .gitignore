@@ -1,0 +1,14 @@
+# Skills instaladas localmente (o skills-lock.json registra quais são)
+.agents/
+.claude/
+
+# Arquivos de trabalho da skill impeccable
+.impeccable/*
+!.impeccable/surfaces/
+!.impeccable/design.json
+
+Thumbs.db
+.DS_Store
+
+# Fotos e vídeos originais da feira (só as escolhidas, sem rosto de alunos, vão para o site)
+fotos/2025/

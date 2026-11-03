@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-03T12:00:00Z",
+  "title": "Design System: Feira Ser, Saber e Empreender 2025",
+  "extensions": {
+    "colorMeta": {
+      "verde": { "role": "primary", "displayName": "Campo Verde", "canonical": "#006B38", "tonalRamp": ["oklch(15% 0.04 152)", "oklch(25% 0.07 152)", "oklch(35% 0.10 152)", "oklch(46% 0.12 152)", "oklch(56% 0.12 152)", "oklch(70% 0.10 152)", "oklch(85% 0.06 152)", "oklch(95% 0.02 152)"] },
+      "verde-sinal": { "role": "primary", "displayName": "Verde Sinal", "canonical": "#00A651", "tonalRamp": ["oklch(15% 0.05 150)", "oklch(25% 0.08 150)", "oklch(35% 0.11 150)", "oklch(45% 0.14 150)", "oklch(55% 0.16 150)", "oklch(63% 0.17 150)", "oklch(85% 0.08 150)", "oklch(95% 0.03 150)"] },
+      "verde-tinta": { "role": "neutral", "displayName": "Tinta Verde", "canonical": "#D5EBDD", "tonalRamp": ["oklch(15% 0.01 155)", "oklch(25% 0.02 155)", "oklch(35% 0.02 155)", "oklch(45% 0.03 155)", "oklch(55% 0.03 155)", "oklch(70% 0.03 155)", "oklch(85% 0.03 155)", "oklch(92% 0.03 155)"] },
+      "azul": { "role": "secondary", "displayName": "Azul da Esfera", "canonical": "#0B4EA2", "tonalRamp": ["oklch(15% 0.05 260)", "oklch(25% 0.09 260)", "oklch(35% 0.13 260)", "oklch(45% 0.16 260)", "oklch(55% 0.15 260)", "oklch(70% 0.10 260)", "oklch(85% 0.05 260)", "oklch(95% 0.02 260)"] },
+      "azul-tinta": { "role": "neutral", "displayName": "Tinta Azul", "canonical": "#D4E2F5", "tonalRamp": ["oklch(15% 0.01 255)", "oklch(25% 0.02 255)", "oklch(35% 0.02 255)", "oklch(45% 0.03 255)", "oklch(55% 0.03 255)", "oklch(70% 0.03 255)", "oklch(85% 0.03 255)", "oklch(90% 0.03 255)"] },
+      "marinho": { "role": "neutral", "displayName": "Marinho", "canonical": "#0A2240", "tonalRamp": ["oklch(15% 0.04 255)", "oklch(25% 0.07 255)", "oklch(35% 0.08 255)", "oklch(45% 0.08 255)", "oklch(55% 0.07 255)", "oklch(70% 0.05 255)", "oklch(85% 0.03 255)", "oklch(95% 0.01 255)"] },
+      "cinza-azul": { "role": "neutral", "displayName": "Cinza-azul", "canonical": "#4A5B73", "tonalRamp": ["oklch(15% 0.02 255)", "oklch(25% 0.03 255)", "oklch(35% 0.04 255)", "oklch(46% 0.04 255)", "oklch(55% 0.04 255)", "oklch(70% 0.03 255)", "oklch(85% 0.02 255)", "oklch(95% 0.01 255)"] },
+      "nevoa": { "role": "neutral", "displayName": "Névoa", "canonical": "#EEF3F9", "tonalRamp": ["oklch(15% 0.005 250)", "oklch(25% 0.008 250)", "oklch(35% 0.01 250)", "oklch(45% 0.01 250)", "oklch(55% 0.01 250)", "oklch(70% 0.01 250)", "oklch(85% 0.01 250)", "oklch(96% 0.01 250)"] },
+      "branco": { "role": "neutral", "displayName": "Branco da Faixa", "canonical": "#FFFFFF", "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(35% 0 0)", "oklch(45% 0 0)", "oklch(55% 0 0)", "oklch(70% 0 0)", "oklch(85% 0 0)", "oklch(100% 0 0)"] },
+      "amarelo": { "role": "tertiary", "displayName": "Amarelo de Ação", "canonical": "#F5C400", "tonalRamp": ["oklch(15% 0.03 90)", "oklch(25% 0.05 90)", "oklch(35% 0.08 90)", "oklch(45% 0.10 90)", "oklch(60% 0.13 90)", "oklch(77% 0.16 90)", "oklch(84% 0.17 90)", "oklch(95% 0.06 90)"] },
+      "amarelo-escuro": { "role": "tertiary", "displayName": "Amarelo Pressionado", "canonical": "#DDB000", "tonalRamp": ["oklch(15% 0.03 90)", "oklch(25% 0.05 90)", "oklch(35% 0.08 90)", "oklch(45% 0.10 90)", "oklch(60% 0.13 90)", "oklch(77% 0.16 90)", "oklch(84% 0.17 90)", "oklch(95% 0.06 90)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The fair name on the white band only." },
+      "headline": { "displayName": "Headline", "purpose": "Section headings; same family for the three ideas, day numerals and the Instagram handle." },
+      "title": { "displayName": "Title", "purpose": "Sub-headings such as day names and story headings." },
+      "body": { "displayName": "Body", "purpose": "All running text in Atkinson Hyperlegible, capped at 62ch." },
+      "label": { "displayName": "Label", "purpose": "Button text, footer term labels, school name in the header. Sentence case." }
+    },
+    "shadows": [
+      { "name": "action-lift", "value": "0 6px 16px -6px rgba(10, 34, 64, .45)", "purpose": "Primary yellow button at rest." },
+      { "name": "action-lift-hover", "value": "0 12px 22px -8px rgba(10, 34, 64, .5)", "purpose": "Primary yellow button on hover, with a 2px rise." },
+      { "name": "viewer-backdrop", "value": "rgba(10, 34, 64, .94)", "purpose": "Backdrop of the photo and video viewer." }
+    ],
+    "motion": [
+      { "name": "sobe", "value": "cubic-bezier(.16, 1, .3, 1)", "purpose": "The single ease-out curve for every transition and entrance." },
+      { "name": "band-wipe", "value": "1s clip-path inset(0 100% 0 0) to inset(0)", "purpose": "White band enters along its length on load." },
+      { "name": "sphere-settle", "value": "1.1s scale(.7) rotate(-40deg) to rest, .15s delay", "purpose": "Sphere settles on the band." },
+      { "name": "stars-light", "value": ".5s scale(.2) to rest, staggered .9s to 1.3s", "purpose": "Five stars light one by one." },
+      { "name": "gallery-develop", "value": "opacity .8s, filter blur(10px) saturate(0) to none 1.1s, translateY(14px) .8s, .1s stagger", "purpose": "Gallery develops once on entering the viewport." },
+      { "name": "angle", "value": "5deg (corte 8.75vw)", "purpose": "The band's rise; the only slope for cuts, crops and rules." }
+    ],
+    "breakpoints": [
+      { "name": "narrow", "value": "360px" },
+      { "name": "phone", "value": "720px" },
+      { "name": "tablet", "value": "900px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The only action button; always yellow, used for the hero action and the Instagram follow.",
+      "html": "<a class=\"ds-botao\" href=\"#\">Ver as fotos</a>",
+      "css": ".ds-botao { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 30px; border-radius: 6px; background: #F5C400; color: #0A2240; font: 800 1.05rem/1 'Archivo', 'Arial Narrow', sans-serif; font-stretch: 110%; letter-spacing: .01em; text-decoration: none; box-shadow: 0 6px 16px -6px rgba(10, 34, 64, .45); transition: background .2s, transform .3s cubic-bezier(.16, 1, .3, 1), box-shadow .3s cubic-bezier(.16, 1, .3, 1); } .ds-botao:hover { background: #DDB000; transform: translateY(-2px); box-shadow: 0 12px 22px -8px rgba(10, 34, 64, .5); } .ds-botao:active { transform: translateY(0); } .ds-botao:focus-visible { outline: 3px solid #F5C400; outline-offset: 3px; }"
+    },
+    {
+      "name": "Viewer Control",
+      "kind": "button",
+      "refersTo": "viewer-control",
+      "description": "Round white control in the photo viewer for close, previous and next.",
+      "html": "<button type=\"button\" class=\"ds-amp-botao\" aria-label=\"Próximo\"><svg viewBox=\"0 0 24 24\"><path d=\"M9 5l7 7-7 7\"/></svg></button>",
+      "css": ".ds-amp-botao { display: grid; place-items: center; width: 52px; height: 52px; border: 0; border-radius: 50%; cursor: pointer; background: #FFFFFF; color: #0A2240; transition: background .2s; } .ds-amp-botao:hover { background: #F5C400; } .ds-amp-botao:focus-visible { outline: 3px solid #F5C400; outline-offset: 3px; } .ds-amp-botao svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Green header with crest disc, two-line school name and bold white links.",
+      "html": "<header class=\"ds-topo\"><a class=\"ds-marca\" href=\"#\"><span class=\"ds-crest\"></span><span class=\"ds-nome\"><small>Colégio Estadual Cívico-Militar</small><strong>Antonio Diniz Pereira</strong></span></a><nav class=\"ds-links\"><a href=\"#\">A feira</a><a href=\"#\">Os dois dias</a><a href=\"#\">Fotos</a><a href=\"#\">Instagram</a></nav></header>",
+      "css": ".ds-topo { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding: 18px 32px; background: #006B38; color: #FFFFFF; font-family: 'Atkinson Hyperlegible', system-ui, sans-serif; } .ds-marca { display: flex; align-items: center; gap: 12px; color: inherit; text-decoration: none; } .ds-crest { width: 48px; height: 48px; border-radius: 50%; background: #0B4EA2; } .ds-nome { display: grid; line-height: 1.15; } .ds-nome small { font-size: .78rem; color: #D5EBDD; } .ds-nome strong { font-family: 'Archivo', 'Arial Narrow', sans-serif; font-weight: 800; font-stretch: 110%; font-size: 1.08rem; } .ds-links { display: flex; flex-wrap: wrap; gap: 4px 26px; } .ds-links a { color: inherit; text-decoration: none; font-weight: 700; font-size: .98rem; padding: 6px 0; border-bottom: 2px solid transparent; transition: border-color .2s; } .ds-links a:hover { border-color: #FFFFFF; } .ds-links a:focus-visible { outline: 3px solid #F5C400; outline-offset: 3px; }"
+    },
+    {
+      "name": "Gallery Tile",
+      "kind": "card",
+      "refersTo": "media-tile",
+      "description": "Pressable 3:4 media tile with mist placeholder, hover zoom, optional play badge and caption below.",
+      "html": "<div class=\"ds-tile\"><button type=\"button\" class=\"ds-tile-btn\"><span class=\"ds-tile-media\"></span><svg class=\"ds-play\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M8 5.5v13l10.5-6.5z\"/></svg></button><span class=\"ds-legenda\">Corrida dos Inteiros, vídeo</span></div>",
+      "css": ".ds-tile { display: grid; gap: 8px; width: 200px; font-family: 'Atkinson Hyperlegible', system-ui, sans-serif; } .ds-tile-btn { position: relative; display: block; width: 100%; aspect-ratio: 3 / 4; padding: 0; border: 0; border-radius: 4px; overflow: hidden; cursor: zoom-in; background: #EEF3F9; } .ds-tile-media { display: block; width: 100%; height: 100%; background: #006B38; transition: transform .6s cubic-bezier(.16, 1, .3, 1); } .ds-tile-btn:hover .ds-tile-media { transform: scale(1.04); } .ds-tile-btn:focus-visible { outline: 3px solid #F5C400; outline-offset: 3px; } .ds-play { position: absolute; left: 12px; bottom: 12px; width: 44px; height: 44px; padding: 11px 9px 11px 13px; border-radius: 50%; background: #FFFFFF; fill: #0A2240; } .ds-legenda { font-size: .92rem; color: #4A5B73; }"
+    },
+    {
+      "name": "Flag Hero",
+      "kind": "custom",
+      "refersTo": "display",
+      "description": "Green field, white band skewed along the 5deg rise carrying the fair name, blue sphere with five white stars.",
+      "html": "<section class=\"ds-bandeira\"><div class=\"ds-faixa\"><h1><span class=\"ds-feira\">Feira</span><span class=\"ds-nome-feira\">Ser, Saber e Empreender</span></h1></div><div class=\"ds-esfera\"><svg class=\"ds-estrela\" style=\"top:6%;left:46%;width:8%\" viewBox=\"0 0 24 24\"><path d=\"M12 1.5l3.1 7.1 7.7.7-5.8 5.1 1.7 7.6L12 18l-6.7 4 1.7-7.6L1.2 9.3l7.7-.7z\"/></svg><svg class=\"ds-estrela\" style=\"bottom:5%;left:45%;width:10%\" viewBox=\"0 0 24 24\"><path d=\"M12 1.5l3.1 7.1 7.7.7-5.8 5.1 1.7 7.6L12 18l-6.7 4 1.7-7.6L1.2 9.3l7.7-.7z\"/></svg><svg class=\"ds-estrela\" style=\"top:44%;left:7%;width:7%\" viewBox=\"0 0 24 24\"><path d=\"M12 1.5l3.1 7.1 7.7.7-5.8 5.1 1.7 7.6L12 18l-6.7 4 1.7-7.6L1.2 9.3l7.7-.7z\"/></svg><svg class=\"ds-estrela\" style=\"top:36%;right:7%;width:8%\" viewBox=\"0 0 24 24\"><path d=\"M12 1.5l3.1 7.1 7.7.7-5.8 5.1 1.7 7.6L12 18l-6.7 4 1.7-7.6L1.2 9.3l7.7-.7z\"/></svg><svg class=\"ds-estrela\" style=\"bottom:17%;right:20%;width:5.5%\" viewBox=\"0 0 24 24\"><path d=\"M12 1.5l3.1 7.1 7.7.7-5.8 5.1 1.7 7.6L12 18l-6.7 4 1.7-7.6L1.2 9.3l7.7-.7z\"/></svg></div></section>",
+      "css": ".ds-bandeira { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; padding: 24px 0 72px; background: #006B38; overflow: hidden; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), 0 100%); } .ds-faixa { grid-column: 1 / -1; grid-row: 1; position: relative; z-index: 1; padding: 48px 200px 48px 32px; color: #0A2240; } .ds-faixa::before { content: ''; position: absolute; z-index: -1; left: -5%; right: -5%; top: 0; bottom: 0; background: #FFFFFF; transform: skewY(-5deg); } .ds-faixa h1 { margin: 0; font-family: 'Archivo', 'Arial Narrow', sans-serif; letter-spacing: -.02em; } .ds-feira { display: block; font-size: 1.8rem; font-weight: 750; font-stretch: 112%; color: #006B38; } .ds-nome-feira { display: block; font-size: 3rem; font-weight: 900; font-stretch: 118%; line-height: .95; letter-spacing: -.025em; } .ds-esfera { grid-column: 2; grid-row: 1; z-index: 2; position: relative; width: 170px; aspect-ratio: 1; margin-right: 32px; border-radius: 50%; background: #0B4EA2; } .ds-estrela { position: absolute; height: auto; fill: #FFFFFF; }"
+    },
+    {
+      "name": "Diagonal Field",
+      "kind": "custom",
+      "refersTo": "footer",
+      "description": "Full-bleed flag-colour section clipped as a parallelogram rising to the right, padded by one cut.",
+      "html": "<section class=\"ds-campo\"><h2>Os dois dias de feira</h2><p>Dia aberto para famílias e comunidade conhecerem os trabalhos dos alunos.</p></section>",
+      "css": ".ds-campo { padding: calc(40px + 48px) 32px; background: #0B4EA2; color: #FFFFFF; clip-path: polygon(0 40px, 100% 0, 100% calc(100% - 40px), 0 100%); font-family: 'Atkinson Hyperlegible', system-ui, sans-serif; } .ds-campo h2 { margin: 0; font-family: 'Archivo', 'Arial Narrow', sans-serif; font-size: 2.4rem; font-weight: 850; font-stretch: 112%; line-height: 1.02; letter-spacing: -.02em; } .ds-campo p { margin: 12px 0 0; color: #D4E2F5; max-width: 40ch; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "A Bandeira do Paraná",
+    "overview": "The page is drawn with the state flag every family in Paraná already knows: a green field, a white band rising from lower left to upper right, and a blue sphere carrying the Cruzeiro do Sul. The flag is not decoration placed on a template; it is the layout. Section edges, image crops and dividers all borrow the band's single rise, and full-bleed fields of green and blue alternate with plain white reading ground as the visitor scrolls.\n\nColour is flat and civic: no gradients, no glass, no textured fills. Display type is a wide, heavy grotesque (Archivo stretched past 100% width) that reads like painted signage on a school wall; running text is Atkinson Hyperlegible so families on phones read the students' texts without effort. Yellow is the only warm note and it belongs to action and focus alone.\n\nMotion has one entrance and one reveal. On load the white band wipes in along its length, the sphere settles with a short rotation, and the five stars light one after another; later, the gallery develops once from blurred and desaturated to full colour as it enters the viewport. Everything else is still. Reduced-motion users get the final state immediately.",
+    "keyCharacteristics": [
+      "Full-bleed flat colour fields (green, blue, navy) cut by one diagonal angle.",
+      "Wide, heavy Archivo display over hyperlegible body text.",
+      "Yellow rationed to actions, focus and selection.",
+      "Circles only where the flag has them: the sphere, the crest, round controls.",
+      "One load choreography, one gallery reveal; nothing loops except muted gallery video while visible."
+    ],
+    "rules": [
+      { "name": "The Yellow Is Action Rule", "body": "Yellow appears only on something the visitor can press or is currently focusing or selecting. Never on headings, fields, badges or decoration.", "section": "colors" },
+      { "name": "The Tint Pairs Rule", "body": "Secondary text takes the tint of the field it sits on: slate on white, green tint on green, blue tint on blue and navy. Never grey on a coloured field.", "section": "colors" },
+      { "name": "The Flat Flag Rule", "body": "Every field is one solid flag colour. No gradients, no glass, no overlaid textures.", "section": "colors" },
+      { "name": "The Wide Voice Rule", "body": "Display roles always use Archivo stretched to 104% or wider with negative tracking (-0.015em to -0.03em). Narrowing to 100% is allowed only where a long single word would overflow a phone screen.", "section": "typography" },
+      { "name": "The Balanced Heading Rule", "body": "Headings use balanced wrapping; long closing statements use pretty wrapping.", "section": "typography" },
+      { "name": "The Only Lift Rule", "body": "Only the yellow action button casts a shadow. Images, tiles and fields never do.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do cut every new coloured field as a parallelogram rising to the right by one `corte` (8.75vw), and pad it by the same amount.",
+      "Do keep Archivo display roles at 104% width or wider, weight 650 to 900, with negative tracking.",
+      "Do pair secondary text with its field's tint: slate on white, green tint on green, blue tint on blue and navy.",
+      "Do use the single ease-out curve `cubic-bezier(.16, 1, .3, 1)` for every transition and entrance.",
+      "Do give every image a Névoa placeholder ground and real width and height attributes.",
+      "Do honour reduced motion by showing final states with no animation."
+    ],
+    "donts": [
+      "Don't use yellow for anything that is not an action, focus or selection.",
+      "Don't introduce gradients, glass, blur panels or textured fills on fields.",
+      "Don't add a second diagonal angle; slopes come from the 5deg band rise (the leaning idea and day rules are its tripled skew).",
+      "Don't add shadows to images, tiles or fields; the yellow button owns the only lift.",
+      "Don't set labels or headings in uppercase.",
+      "Don't split the hero into copy beside an image or line up a row of equal cards."
+    ]
+  }
+}

@@ -2,192 +2,173 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Feira Ser, Saber e Empreender 2025</title>
-  <meta name="description" content="Fotos e memórias da Feira Ser, Saber e Empreender 2025 do Colégio Estadual Cívico-Militar Antonio Diniz Pereira, realizada em 8 e 9 de novembro.">
+  <meta name="description" content="Como foi a Feira Ser, Saber e Empreender 2025 do Colégio Estadual Cívico-Militar Antonio Diniz Pereira, nos dias 27 e 28 de novembro: textos dos alunos, fotos e vídeos dos trabalhos.">
+  <meta name="theme-color" content="#006B38">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="icon" href="img/brasao.webp" type="image/webp">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Faixa verde lateral: a mesma da calça da farda -->
-  <div class="faixa" aria-hidden="true"></div>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="estrela" viewBox="0 0 24 24"><path d="M12 1.5l3.1 7.1 7.7.7-5.8 5.1 1.7 7.6L12 18l-6.7 4 1.7-7.6L1.2 9.3l7.7-.7z"/></symbol>
+    <symbol id="play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></symbol>
+  </svg>
+
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
   <header class="topo">
     <a class="marca" href="#inicio">
-      <img class="brasao" src="img/brasao.webp" alt="" width="52" height="52">
-      <span class="marca-texto">
-        <strong>Colégio Estadual Cívico-Militar</strong>
-        <span>Antonio Diniz Pereira</span>
-      </span>
+      <img src="img/brasao.webp" alt="" width="48" height="48">
+      <span><small>Colégio Estadual Cívico-Militar</small><strong>Antonio Diniz Pereira</strong></span>
     </a>
-    <nav aria-label="Seções">
+    <nav class="links" aria-label="Seções">
       <a href="#importancia">A feira</a>
+      <a href="#dias">Os dois dias</a>
       <a href="#galeria">Fotos</a>
-      <a href="#instagram">Instagram</a>
+      <a href="https://www.instagram.com/ccmantoniodiniz/" target="_blank" rel="noopener">Instagram</a>
     </nav>
   </header>
 
   <main id="inicio">
 
-    <section class="hero">
-      <div class="hero-texto">
-        <p class="tarja">Edição 2025</p>
-        <p class="hero-pre">Feira</p>
-        <h1 aria-label="Ser, saber e empreender">
-          <span>Ser,</span>
-          <span>saber e</span>
-          <span>empreender</span>
-        </h1>
-        <p class="lead">Nos dias 27 e 28 de novembro de 2025, o colégio organiza sua feira de ciências para apresentar os projetos do ano.</p>
-        <>
-        <dl class="dados">
-          <div><dt>Abertura</dt><dd>8 de novembro</dd></div>
-          <div><dt>Visitação</dt><dd>9 de novembro</dd></div>
-        </dl>
+    <!-- Bandeira: campo verde, faixa branca diagonal e esfera azul -->
+    <section class="bandeira" aria-labelledby="titulo">
+      <div class="faixa">
+        <div class="faixa-texto">
+          <h1 id="titulo">
+            <span class="titulo-feira">Feira</span>
+            <span class="titulo-nome">Ser, Saber e Empreender</span>
+          </h1>
+        </div>
+      </div>
+
+      <div class="esfera" aria-hidden="true">
+        <img src="img/brasao.webp" alt="" width="270" height="270">
+        <svg viewBox="0 0 24 24" class="estrela e1"><use href="#estrela"/></svg>
+        <svg viewBox="0 0 24 24" class="estrela e2"><use href="#estrela"/></svg>
+        <svg viewBox="0 0 24 24" class="estrela e3"><use href="#estrela"/></svg>
+        <svg viewBox="0 0 24 24" class="estrela e4"><use href="#estrela"/></svg>
+        <svg viewBox="0 0 24 24" class="estrela e5"><use href="#estrela"/></svg>
+      </div>
+
+      <div class="bandeira-rodape" id="conteudo">
+        <p class="lead">Nos dias 27 e 28 de novembro de 2025, o colégio realizou sua feira para apresentar os projetos desenvolvidos pelos alunos ao longo do ano.</p>
         <div class="acoes">
-          <a class="btn btn-principal" href="#galeria">Ver as fotos</a>
+          <a class="botao" href="#galeria">Ver as fotos</a>
+          <p class="edicao">Edição 2025</p>
         </div>
-      </div>
-
-      <img class="hero-brasao" src="img/brasao.webp" alt="Brasão dos Colégios Cívico-Militares do Paraná" width="270" height="270">
-    </section>
-
-    <section class="tema" id="tema">
-      <h2>Três ideias, uma feira</h2>
-      <p class="secao-intro">O nome da feira resume o que o colégio quer formar: pessoas com valores, com conhecimento e com iniciativa.</p>
-      <div class="pilares">
-        <article class="pilar">
-          <h3>Ser</h3>
-          <p>Valores, cidadania, respeito e convivência.</p>
-        </article>
-        <article class="pilar">
-          <h3>Saber</h3>
-          <p>Conhecimento, pesquisa e curiosidade.</p>
-        </article>
-        <article class="pilar">
-          <h3>Empreender</h3>
-          <p>Iniciativa para transformar ideias em ação.</p>
-        </article>
       </div>
     </section>
 
-    <section class="importancia" id="importancia">
-      <h2>Por que essa feira importa</h2>
-      <p class="secao-intro">A feira escolar é um evento breve, mas o movimento de aprendizado que ela gera é contínuo. Antes e depois da exposição, cada trabalho reflete um processo profundo de pesquisa, tentativa e erro, aprimoramento e constante diálogo entre professores e estudantes.</p>
-
-      <div class="historia">
-        <div class="historia-texto">
-          <h3>Aprender fazendo</h3>
-          <p>na sala de aula, o conteúdo chega pelo professor. Na feira, o caminho se inverte: são os alunos que pesquisam, testam e montam o trabalho. Quando precisam explicar o que fizeram para alguém de fora, descobrem o que realmente entenderam, e o aprendizado fica de um jeito que a prova sozinha não consegue.</p>
-        </div>
-        <figure class="historia-foto sem-foto">
-          <img data-src="fotos/feira-1.jpg" alt="Alunos durante a feira">
-        </figure>
-      </div>
-
-      <div class="historia">
-        <div class="historia-texto">
-          <h3>Postura, responsabilidade e trabalho em equipe</h3>
-         <p>Receber visitantes, falar em público e responder perguntas são experiências que ajudam os alunos a desenvolver a confiança, a comunicação e a segurança em si mesmos. Já dividir tarefas, cumprir prazos e cuidar do próprio espaço são atitudes que ensinam, na prática, o valor da responsabilidade, da organização e do respeito ao próximo. São aprendizados que vão além da sala de aula e contribuem para a formação de jovens mais conscientes, responsáveis e preparados para os desafios da vida, valores que fazem parte da proposta de um colégio cívico-militar..</p>
-        </div>
-        <figure class="historia-foto sem-foto">
-          <img data-src="fotos/feira-2.jpg" alt="Alunos apresentando trabalhos na feira">
-        </figure>
-      </div>
-
-      <div class="historia">
-        <div class="historia-texto">
-          <h3>Da criatividade à prática.</h3>
-          <p>Empreender é muito mais do que ter um negócio. É pensar em ideias, encontrar soluções e transformá-las em realidade. A feira é uma oportunidade para os alunos explorarem sua criatividade e apresentarem suas próprias criações.</p>
-        </div>
-        <figure class="historia-foto sem-foto">
-          <img data-src="fotos/feira-3.jpg" alt="Trabalho dos alunos exposto na feira">
-        </figure>
-      </div>
-      <div class="historia">
-        <div class="historia-texto">
-          <h3>Escola de Portas Abertas: Construindo Pontes, Compartilhando Conquistas</h3>
-          <p>Abrir as portas da nossa escola para as famílias e a comunidade é uma forma de compartilhar o protagonismo dos nossos alunos. Esse encontro estreita parcerias essenciais e reforça o valor da dedicação dos estudantes, mostrando que o aprendizado se constrói juntos.</p>
-        </div
-        <figure class="historia-foto sem-foto">
-          <img data-src="fotos/feira-4.jpg" alt="Visitantes na feira">
-        </figure>
-      </div>
+    <!-- Tema -->
+    <section class="tema" aria-labelledby="tema-titulo">
+      <h2 id="tema-titulo">Três ideias, uma feira</h2>
+      <p class="intro">O nome da feira resume o que o colégio quer formar: pessoas com valores, com conhecimento e com iniciativa.</p>
+      <dl class="ideias">
+        <div><dt>Ser</dt><dd>Valores, cidadania, respeito e convivência.</dd></div>
+        <div><dt>Saber</dt><dd>Conhecimento, pesquisa e curiosidade.</dd></div>
+        <div><dt>Empreender</dt><dd>Iniciativa para transformar ideias em ação.</dd></div>
+      </dl>
     </section>
 
-    <section class="dias" id="dias">
-      <h2>Os dois dias de feira</h2>
-      <ol class="linha-tempo">
+    <!-- Textos escritos com os alunos -->
+    <section class="importancia" id="importancia" aria-labelledby="imp-titulo">
+      <h2 id="imp-titulo">Por que essa feira importa</h2>
+      <p class="intro">A feira escolar é um evento breve, mas o aprendizado que ela movimenta é contínuo. Antes e depois da exposição, cada trabalho reflete um processo de pesquisa, tentativa e erro, aprimoramento e diálogo constante entre professores e estudantes.</p>
+
+      <article class="relato">
+        <figure class="placa"><img src="fotos/maquete-montanha.jpg" alt="Maquete de geografia com montanha de papel alumínio e algodão, rio e vegetação" width="960" height="1280" loading="lazy"></figure>
+        <h3>Aprender fazendo</h3>
+        <p>Na sala de aula, o conteúdo chega pelo professor. Na feira, o caminho se inverte: são os alunos que pesquisam, testam e montam o trabalho. Quando precisam explicar o que fizeram para alguém de fora, descobrem o que realmente entenderam, e o aprendizado fica de um jeito que a prova sozinha não consegue.</p>
+      </article>
+
+      <article class="relato relato-campo">
+        <figure class="placa"><img src="fotos/maquete-historia.jpg" alt="Maquete histórica com tabuleiro de xadrez, bandeiras de países e cartazes explicativos" width="1280" height="960" loading="lazy"></figure>
+        <h3>Postura, responsabilidade e trabalho em equipe</h3>
+        <p>Receber visitantes, falar em público e responder perguntas são experiências que ajudam os alunos a desenvolver confiança, comunicação e segurança. Dividir tarefas, cumprir prazos e cuidar do próprio espaço ensinam, na prática, o valor da responsabilidade, da organização e do respeito ao próximo. São aprendizados que vão além da sala de aula e formam jovens mais conscientes e preparados para os desafios da vida, valores que fazem parte da proposta de um colégio cívico-militar.</p>
+      </article>
+
+      <article class="relato">
+        <figure class="placa"><img src="fotos/filtros-dos-sonhos.jpg" alt="Filtros dos sonhos e árvore de macramê feitos pelos alunos" width="960" height="1280" loading="lazy"></figure>
+        <h3>Da criatividade à prática</h3>
+        <p>Empreender é muito mais do que ter um negócio. É pensar em ideias, encontrar soluções e transformá-las em realidade. A feira é uma oportunidade para os alunos explorarem a criatividade e apresentarem suas próprias criações.</p>
+      </article>
+
+      <article class="relato">
+        <figure class="placa"><img src="fotos/cidade-sustentavel.jpg" alt="Maquete de cidade sustentável do Sudeste Asiático, com prédios, rua, árvores e lago" width="960" height="1280" loading="lazy"></figure>
+        <h3>Escola de portas abertas: construindo pontes, compartilhando conquistas</h3>
+        <p>Abrir as portas da escola para as famílias e a comunidade é uma forma de mostrar o protagonismo dos nossos alunos. Esse encontro fortalece parcerias essenciais, valoriza a dedicação dos estudantes e mostra que o aprendizado se constrói junto.</p>
+      </article>
+    </section>
+
+    <!-- Os dois dias -->
+    <section class="dias" id="dias" aria-labelledby="dias-titulo">
+      <h2 id="dias-titulo">Os dois dias de feira</h2>
+      <ol class="dias-lista">
         <li>
-          <time datetime="2025-11-08">08/11</time>
-          <div><h3>Abertura</h3><p>Abertura oficial da feira no colégio.</p></div>
+          <time datetime="2025-11-27"><span class="dia-num">27</span><span class="dia-mes">de novembro</span></time>
+          <h3>Abertura</h3>
+          <p>Abertura oficial da feira no colégio.</p>
         </li>
         <li>
-          <time datetime="2025-11-09">09/11</time>
-          <div><h3>Visitação</h3><p>Dia aberto para famílias e comunidade conhecerem os trabalhos dos alunos.</p></div>
+          <time datetime="2025-11-28"><span class="dia-num">28</span><span class="dia-mes">de novembro</span></time>
+          <h3>Visitação</h3>
+          <p>Dia aberto para famílias e comunidade conhecerem os trabalhos dos alunos.</p>
         </li>
       </ol>
     </section>
 
-    <section class="instagram" id="instagram">
-      <div class="instagram-texto">
-        <h2>Siga o colégio no Instagram</h2>
-        <p>Fotos da feira, eventos, avisos e o dia a dia dos alunos. Acompanhe tudo pelo perfil oficial.</p>
-      </div>
-      <a class="instagram-perfil" href="https://www.instagram.com/ccmantoniodiniz/" target="_blank" rel="noopener">
-        <svg aria-hidden="true" viewBox="0 0 24 24" width="40" height="40"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor"/></svg>
-        <span class="instagram-arroba">@ccmantoniodiniz</span>
-        <span class="btn btn-claro">Seguir no Instagram</span>
-      </a>
+    <!-- Instagram, no meio da página: convite para postar e marcar -->
+    <section class="instagram" id="instagram" aria-labelledby="ig-titulo">
+      <h2 id="ig-titulo">Poste, marque o colégio e ajude a contar a feira deste ano</h2>
+      <p>Vai participar ou visitar a feira? Poste fotos e vídeos dos trabalhos e marque <strong>@ccmantoniodiniz</strong>. As publicações marcadas ajudam a montar a página da próxima edição. Siga o perfil para acompanhar tudo.</p>
+      <a class="ig-perfil" href="https://www.instagram.com/ccmantoniodiniz/" target="_blank" rel="noopener">@ccmantoniodiniz</a>
+      <a class="botao" href="https://www.instagram.com/ccmantoniodiniz/" target="_blank" rel="noopener">Seguir no Instagram</a>
     </section>
 
-    <section class="galeria" id="galeria">
-      <h2>Fotos da feira</h2>
-      <p class="secao-intro">Clique em uma foto para ampliar.</p>
+    <!-- Galeria única de fotos e vídeos -->
+    <section class="galeria" id="galeria" aria-labelledby="gal-titulo">
+      <h2 id="gal-titulo">Fotos e vídeos da feira</h2>
+      <p class="intro">Mais alguns trabalhos expostos. Toque em uma foto ou vídeo para ampliar.</p>
 
-      <!-- Para adicionar fotos: salve em "fotos/" e copie um <li> mudando o nome do arquivo -->
-      <div class="galeria-dia">
-        <h3><time datetime="2025-11-08">08/11</time> Abertura</h3>
-        <ul class="fotos">
-          <li class="sem-foto"><button type="button"><img data-src="fotos/abertura-1.jpg" alt="Abertura da feira, 8 de novembro"></button></li>
-          <li class="sem-foto"><button type="button"><img data-src="fotos/abertura-2.jpg" alt="Abertura da feira, 8 de novembro"></button></li>
-          <li class="sem-foto"><button type="button"><img data-src="fotos/abertura-3.jpg" alt="Abertura da feira, 8 de novembro"></button></li>
-        </ul>
-      </div>
-
-      <div class="galeria-dia">
-        <h3><time datetime="2025-11-09">09/11</time> Visitação</h3>
-        <ul class="fotos">
-          <li class="sem-foto"><button type="button"><img data-src="fotos/visitacao-1.jpg" alt="Visitação da feira, 9 de novembro"></button></li>
-          <li class="sem-foto"><button type="button"><img data-src="fotos/visitacao-2.jpg" alt="Visitação da feira, 9 de novembro"></button></li>
-          <li class="sem-foto"><button type="button"><img data-src="fotos/visitacao-3.jpg" alt="Visitação da feira, 9 de novembro"></button></li>
-        </ul>
-      </div>
+      <!-- Para adicionar: salve o arquivo em "fotos/" e copie um <li> mudando o nome -->
+      <ul class="midias">
+        <li class="destaque"><button type="button"><img src="fotos/painel-amor.jpg" alt="Painel Enquanto existir amor, não haverá diferenças, com peças de quebra-cabeça" width="960" height="1280" loading="lazy"></button><span class="legenda">Enquanto existir amor</span></li>
+        <li><button type="button"><video src="fotos/video-corrida-dos-inteiros.mp4#t=0.5" muted loop playsinline preload="metadata" aria-label="Vídeo do jogo Corrida dos Inteiros, montado no chão"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Corrida dos Inteiros, vídeo</span></li>
+        <li><button type="button"><img src="fotos/pequeno-principe.jpg" alt="Painel inspirado em O Pequeno Príncipe, com avião e estrelas" width="960" height="1280" loading="lazy"></button><span class="legenda">O Pequeno Príncipe</span></li>
+        <li><button type="button"><video src="fotos/video-geografia-6b.mp4#t=0.5" muted loop playsinline preload="metadata" aria-label="Vídeo da maquete do trabalho de Geografia do 6º ano B"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Geografia 6º B, vídeo</span></li>
+        <li><button type="button"><video src="fotos/video-quadras.mp4#t=0.5" muted loop playsinline preload="metadata" aria-label="Vídeo das maquetes de quadras esportivas"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Quadras esportivas, vídeo</span></li>
+      </ul>
     </section>
 
-    <section class="recado">
-      <p class="obrigado">Expressamos nosso sincero agradecimento aos alunos, professores, colaboradores e familiares pelo empenho e dedicação na realização de mais uma feira. O sucesso do evento é fruto do esforço coletivo de todos. Até a próxima!</p>
+    <!-- Agradecimento -->
+    <section class="obrigado" aria-label="Agradecimento">
+      <p>Expressamos nosso sincero agradecimento aos alunos, professores, colaboradores e familiares pelo empenho e pela dedicação na realização de mais uma feira. O sucesso do evento é fruto do esforço coletivo de todos. Até a próxima!</p>
     </section>
 
   </main>
 
   <footer class="rodape">
-    <img class="rodape-brasao" src="img/brasao.webp" alt="" width="72" height="72">
-    <div>
-      <p><strong>Colégio Estadual Cívico-Militar Antonio Diniz Pereira</strong></p>
-      <p>Rede Estadual de Ensino do Paraná</p>
-      <p><a href="https://www.instagram.com/ccmantoniodiniz/" target="_blank" rel="noopener">@ccmantoniodiniz no Instagram</a></p>
-    </div>
+    <img src="img/brasao.webp" alt="Brasão dos Colégios Cívico-Militares do Paraná" width="72" height="72">
+    <dl>
+      <div><dt>Colégio</dt><dd>Colégio Estadual Cívico-Militar Antonio Diniz Pereira</dd></div>
+      <div><dt>Rede</dt><dd>Rede Estadual de Ensino do Paraná</dd></div>
+      <div><dt>Feira</dt><dd>Ser, Saber e Empreender, 27 e 28 de novembro de 2025</dd></div>
+      <div><dt>Textos</dt><dd>Escritos com a participação dos alunos do colégio</dd></div>
+      <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/ccmantoniodiniz/" target="_blank" rel="noopener">@ccmantoniodiniz</a></dd></div>
+    </dl>
   </footer>
 
-  <dialog class="ampliar" id="ampliar">
-    <img src="" alt="">
-    <p class="ampliar-legenda"></p>
-    <button type="button" class="ampliar-fechar" aria-label="Fechar foto">×</button>
+  <dialog class="ampliar" id="ampliar" aria-label="Foto ou vídeo ampliado">
+    <figure><div class="amp-midia"></div><figcaption></figcaption></figure>
+    <button type="button" class="amp-botao amp-fechar" aria-label="Fechar"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <button type="button" class="amp-botao amp-ant" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button type="button" class="amp-botao amp-prox" aria-label="Próximo"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
   </dialog>
 
   <script src="script.js"></script>
