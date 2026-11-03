@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Fotos e vídeos da Feira 2025</title>
+  <meta name="description" content="Todas as fotos e vídeos da Feira Ser, Saber e Empreender 2025 do Colégio Estadual Cívico-Militar Antonio Diniz Pereira.">
+  <meta name="theme-color" content="#006B38">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/brasao.webp" type="image/webp">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="estrela" viewBox="0 0 24 24"><path d="M12 1.5l3.1 7.1 7.7.7-5.8 5.1 1.7 7.6L12 18l-6.7 4 1.7-7.6L1.2 9.3l7.7-.7z"/></symbol>
+    <symbol id="play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></symbol>
+  </svg>
+
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topo">
+    <a class="marca" href="index.html">
+      <img src="img/brasao.webp" alt="" width="48" height="48">
+      <span><small>Colégio Estadual Cívico-Militar</small><strong>Antonio Diniz Pereira</strong></span>
+    </a>
+    <nav class="links" aria-label="Seções">
+      <a href="index.html">Início</a>
+      <a href="index.html#importancia">A feira</a>
+      <a href="https://www.instagram.com/ccmantoniodiniz/" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="acervo-topo" aria-labelledby="acervo-titulo">
+      <a class="voltar" href="index.html#galeria">Voltar para a página da feira</a>
+      <h1 id="acervo-titulo">Fotos e vídeos da feira</h1>
+      <p>Feira Ser, Saber e Empreender, 27 e 28 de novembro de 2025. 12 fotos e 25 vídeos dos trabalhos dos alunos.</p>
+    </section>
+
+    <section class="galeria acervo" id="conteudo" aria-label="Todas as fotos e vídeos">
+      <div class="filtro" role="group" aria-label="Mostrar">
+        <button type="button" data-filtro="tudo" aria-pressed="true">Tudo</button>
+        <button type="button" data-filtro="foto" aria-pressed="false">Fotos</button>
+        <button type="button" data-filtro="video" aria-pressed="false">Vídeos</button>
+      </div>
+      <!-- Para adicionar: salve o arquivo em "fotos/" e copie um <li> mudando o nome -->
+      <ul class="midias mosaico">
+        <li data-tipo="foto"><button type="button"><img src="fotos/cidade-sustentavel.jpg" alt="Maquete de cidade sustentável do Sudeste Asiático" width="960" height="1280" loading="lazy"></button><span class="legenda">Cidade sustentável</span></li>
+        <li data-tipo="foto"><button type="button"><img src="fotos/maquete-historia.jpg" alt="Maquete histórica com tabuleiro de xadrez e bandeiras de países" width="1280" height="960" loading="lazy"></button><span class="legenda">Maquete histórica</span></li>
+        <li data-tipo="video"><button type="button"><video data-src="fotos/video-corrida-dos-inteiros.mp4#t=0.5" muted loop playsinline preload="none" aria-label="Vídeo: Jogo Corrida dos Inteiros, montado no chão"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Corrida dos Inteiros, vídeo</span></li>
+        <li data-tipo="foto"><button type="button"><img src="fotos/painel-amor.jpg" alt="Painel Enquanto existir amor, não haverá diferenças" width="960" height="1280" loading="lazy"></button><span class="legenda">Enquanto existir amor</span></li>
+        <li data-tipo="foto"><button type="button"><img src="fotos/maquete-montanha.jpg" alt="Maquete de relevo com montanha, rio e vegetação" width="960" height="1280" loading="lazy"></button><span class="legenda">Relevo e hidrografia</span></li>
+        <li data-tipo="video"><button type="button"><video data-src="fotos/video-geografia-6b.mp4#t=0.5" muted loop playsinline preload="none" aria-label="Vídeo: Maquete do trabalho de Geografia do 6º ano B"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Geografia 6º B, vídeo</span></li>
+        <li data-tipo="foto"><button type="button"><img src="fotos/filtros-dos-sonhos.jpg" alt="Filtros dos sonhos e árvore de macramê" width="960" height="1280" loading="lazy"></button><span class="legenda">Filtros dos sonhos</span></li>
+        <li data-tipo="foto"><button type="button"><img src="fotos/pequeno-principe.jpg" alt="Painel inspirado em O Pequeno Príncipe, com avião e estrelas" width="960" height="1280" loading="lazy"></button><span class="legenda">O Pequeno Príncipe</span></li>
+        <li data-tipo="video"><button type="button"><video data-src="fotos/video-quadras.mp4#t=0.5" muted loop playsinline preload="none" aria-label="Vídeo: Maquetes de quadras esportivas"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Quadras esportivas, vídeo</span></li>
+        <li data-tipo="foto"><button type="button"><img src="fotos/cidade-sustentavel-2.jpg" alt="Detalhe da cidade sustentável com placas solares nos telhados" width="960" height="1280" loading="lazy"></button><span class="legenda">Cidade sustentável, detalhe</span></li>
+        <li data-tipo="foto"><button type="button"><img src="fotos/painel-fotos-alunos.jpg" alt="Painel com fotos dos alunos e desenhos de O Pequeno Príncipe" width="960" height="1280" loading="lazy"></button><span class="legenda">Painel de fotos</span></li>
+        <li data-tipo="video"><button type="button"><video data-src="fotos/video-hidraulica.mp4#t=0.5" muted loop playsinline preload="none" aria-label="Vídeo: Braço hidráulico feito com seringas"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Braço hidráulico, vídeo</span></li>
+        <li data-tipo="foto"><button type="button"><img src="fotos/maquete-historia-2.jpg" alt="Maquete histórica vista de frente, com cartazes explicativos" width="1280" height="960" loading="lazy"></button><span class="legenda">Maquete histórica, de frente</span></li>
+        <li data-tipo="foto"><button type="button"><img src="fotos/painel-amor-2.jpg" alt="Painel Enquanto existir amor visto de frente" width="960" height="1280" loading="lazy"></button><span class="legenda">Enquanto existir amor, de frente</span></li>
+        <li data-tipo="video"><button type="button"><video data-src="fotos/video-sistema-solar.mp4#t=0.5" muted loop playsinline preload="none" aria-label="Vídeo: Sistema solar montado dentro de uma caixa"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Sistema solar, vídeo</span></li>
+        <li data-tipo="foto"><button type="button"><img src="fotos/cidade-sustentavel-3.jpg" alt="Cidade sustentável vista de cima, com rua e lago" width="960" height="1280" loading="lazy"></button><span class="legenda">Cidade sustentável, de cima</span></li>
+        <li data-tipo="foto"><button type="button"><img src="fotos/cidade-sustentavel-4.jpg" alt="Cidade sustentável vista de lado" width="960" height="1280" loading="lazy"></button><span class="legenda">Cidade sustentável, de lado</span></li>
+        <li data-tipo="video"><button type="button"><video data-src="fotos/video-cidade-sustentavel.mp4#t=0.5" muted loop playsinline preload="none" aria-label="Vídeo: Maquete de cidade sustentável"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Cidade sustentável, vídeo</span></li>
+        <li data-tipo="video"><button type="button"><video data-src="fotos/video-objetos-antigos.mp4#t=0.5" muted loop playsinline preload="none" aria-label="Vídeo: Mesa com objetos antigos"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Objetos antigos, vídeo</span></li>
+        <li data-tipo="video"><button type="button"><video data-src="fotos/video-filtros-dos-sonhos.mp4#t=0.5" muted loop playsinline preload="none" aria-label="Vídeo: Filtros dos sonhos pendurados na tenda"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Filtros dos sonhos, vídeo</span></li>
+        <li data-tipo="video"><button type="button"><video data-src="fotos/video-jogo-da-velha.mp4#t=0.5" muted loop playsinline preload="none" aria-label="Vídeo: Jogo da velha gigante"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Jogo da velha, vídeo</span></li>
+        <li data-tipo="video"><button type="button"><video data-src="fotos/video-montanhas.mp4#t=0.5" muted loop playsinline preload="none" aria-label="Vídeo: Maquete de montanhas"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Montanhas, vídeo</span></li>
+        <li data-tipo="video"><button type="button"><video data-src="fotos/video-cidade-de-caixas.mp4#t=0.5" muted loop playsinline preload="none" aria-label="Vídeo: Cidade feita com caixas"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Cidade de caixas, vídeo</span></li>
+        <li data-tipo="video"><button type="button"><video data-src="fotos/video-maquete-litoral.mp4#t=0.5" muted loop playsinline preload="none" aria-label="Vídeo: Maquete de litoral com barco"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Litoral, vídeo</span></li>
+        <li data-tipo="video"><button type="button"><video data-src="fotos/video-maquete-historia.mp4#t=0.5" muted loop playsinline preload="none" aria-label="Vídeo: Maquete histórica"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Maquete histórica, vídeo</span></li>
+        <li data-tipo="video"><button type="button"><video data-src="fotos/video-painel-inclusao.mp4#t=0.5" muted loop playsinline preload="none" aria-label="Vídeo: Painel sobre inclusão"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Inclusão, vídeo</span></li>
+        <li data-tipo="video"><button type="button"><video data-src="fotos/video-personagens.mp4#t=0.5" muted loop playsinline preload="none" aria-label="Vídeo: Personagens feitos com caixas"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Personagens, vídeo</span></li>
+        <li data-tipo="video"><button type="button"><video data-src="fotos/video-maquete-flores.mp4#t=0.5" muted loop playsinline preload="none" aria-label="Vídeo: Maquete com flores e casas"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Maquete com flores, vídeo</span></li>
+        <li data-tipo="video"><button type="button"><video data-src="fotos/video-maquete-ponte.mp4#t=0.5" muted loop playsinline preload="none" aria-label="Vídeo: Maquete de poço e ponte"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Poço e ponte, vídeo</span></li>
+        <li data-tipo="video"><button type="button"><video data-src="fotos/video-maquete-jardim.mp4#t=0.5" muted loop playsinline preload="none" aria-label="Vídeo: Maquete de jardim com mapa"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Jardim, vídeo</span></li>
+        <li data-tipo="video"><button type="button"><video data-src="fotos/video-matematica.mp4#t=0.5" muted loop playsinline preload="none" aria-label="Vídeo: Espaço de Matemática"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Matemática, vídeo</span></li>
+        <li data-tipo="video"><button type="button"><video data-src="fotos/video-painel-fotos.mp4#t=0.5" muted loop playsinline preload="none" aria-label="Vídeo: Painel com fotos e estrelas"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Painel de fotos, vídeo</span></li>
+        <li data-tipo="video"><button type="button"><video data-src="fotos/video-painel-estrelas.mp4#t=0.5" muted loop playsinline preload="none" aria-label="Vídeo: Painel com estrelas"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Painel de estrelas, vídeo</span></li>
+        <li data-tipo="video"><button type="button"><video data-src="fotos/video-tenda-estrelas.mp4#t=0.5" muted loop playsinline preload="none" aria-label="Vídeo: Tenda decorada com estrelas"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Tenda decorada, vídeo</span></li>
+        <li data-tipo="video"><button type="button"><video data-src="fotos/video-trabalho-mesa.mp4#t=0.5" muted loop playsinline preload="none" aria-label="Vídeo: Trabalho exposto sobre a mesa"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Trabalho exposto, vídeo</span></li>
+        <li data-tipo="video"><button type="button"><video data-src="fotos/video-hidraulica-2.mp4#t=0.5" muted loop playsinline preload="none" aria-label="Vídeo: Braço hidráulico em funcionamento"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Braço hidráulico, de perto, vídeo</span></li>
+        <li data-tipo="video"><button type="button"><video data-src="fotos/video-objetos-antigos-2.mp4#t=0.5" muted loop playsinline preload="none" aria-label="Vídeo: Objetos antigos de perto"></video><svg class="icone-play" viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></button><span class="legenda">Objetos antigos, de perto, vídeo</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <img src="img/brasao.webp" alt="Brasão dos Colégios Cívico-Militares do Paraná" width="72" height="72">
+    <dl>
+      <div><dt>Colégio</dt><dd>Colégio Estadual Cívico-Militar Antonio Diniz Pereira</dd></div>
+      <div><dt>Rede</dt><dd>Rede Estadual de Ensino do Paraná</dd></div>
+      <div><dt>Feira</dt><dd>Ser, Saber e Empreender, 27 e 28 de novembro de 2025</dd></div>
+      <div><dt>Textos</dt><dd>Escritos com a participação dos alunos do colégio</dd></div>
+      <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/ccmantoniodiniz/" target="_blank" rel="noopener">@ccmantoniodiniz</a></dd></div>
+    </dl>
+  </footer>
+
+  <dialog class="ampliar" id="ampliar" aria-label="Foto ou vídeo ampliado">
+    <figure><div class="amp-midia"></div><figcaption></figcaption></figure>
+    <button type="button" class="amp-botao amp-fechar" aria-label="Fechar"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <button type="button" class="amp-botao amp-ant" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button type="button" class="amp-botao amp-prox" aria-label="Próximo"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -33,8 +33,9 @@ It is the school's own record of its own fair, partly written by its students. O
 ## Capabilities and Constraints
 
 - Two-day structure: day 1 Abertura, day 2 Visitação.
-- A single gallery of photos and short muted videos (no split by day: the files do not say which day they were taken), with lightbox.
-- Only photos and videos without identifiable students may be published (user decision, 2026-11-03).
+- A single gallery of photos and short muted videos (no split by day: the files do not say which day they were taken), with lightbox. The landing page shows a selection and a "Ver todas as fotos e vídeos" button leads to galeria.html, which holds every 2025 photo and video with a Tudo / Fotos / Vídeos filter.
+- Photos and videos showing students may be published, because they are part of the fair (user decision, 2026-11-03, replacing an earlier "no faces" rule).
+- Instagram screenshots from November 2024 (III Feira do Conhecimento, with the fashion parade) belong to the previous edition and are left out of this page (user decision).
 - Instagram block in the middle of the page invites visitors to post photos and videos of the fair and tag @ccmantoniodiniz, so the tagged posts can build the next edition's page; the link also sits in the footer: https://www.instagram.com/ccmantoniodiniz/
 - Open decisions: no confirmed schedule, project list, participant counts, or testimonials.
 
@@ -50,7 +51,7 @@ It is the school's own record of its own fair, partly written by its students. O
 
 - img/brasao.webp: official CCM-PR crest.
 - Student-written texts merged from PRs #1, #2, #3, #5, #6, #7 (lightly edited for grammar, meaning kept).
-- Published media in fotos/: 6 photos of projects and 3 short videos, chosen because no student face is visible.
+- Published media in fotos/: 12 photos and 25 short videos of the 2025 fair. Left out: duplicate files and a 4-minute promotional TikTok video (19 MB).
 - Absent and never to be fabricated: number of projects, project names, visitor counts, schedule times, quotes from staff or students.
 
 ## Product Principles
