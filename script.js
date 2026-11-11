@@ -119,3 +119,115 @@ if (dialogo) {
     toqueX = null;
   });
 }
+
+// =========================================================
+// Modo expositor: para o computador da exposição.
+// Abra index.html?expositor — depois de alguns segundos sem ninguém mexer,
+// a página rola sozinha. Qualquer movimento de mouse, toque, roda ou tecla
+// interrompe na hora; ela volta a rolar depois de um tempo parada.
+// =========================================================
+const modoExpositor = new URLSearchParams(location.search).has("expositor");
+
+if (modoExpositor) {
+  const ESPERA_PARA_COMECAR = 8000; // ms parado até começar a rolar
+  const VELOCIDADE = 55;            // pixels por segundo
+  const PAUSA_NO_FIM = 5000;        // ms parado no fim da página
+  const PAUSA_NO_TOPO = 4000;       // ms parado no topo antes de recomeçar
+  const naGaleria = location.pathname.endsWith("galeria.html");
+
+  let rolando = false;
+  let quadro = null;
+  let inicioTempo = 0;
+  let inicioY = 0;
+  let timerOcioso = null;
+  let timerPausa = null;
+
+  // Os links internos continuam no modo expositor
+  document.querySelectorAll('a[href^="index.html"], a[href^="galeria.html"]').forEach((a) => {
+    const [caminho, ancora] = a.getAttribute("href").split("#");
+    a.setAttribute("href", caminho + "?expositor" + (ancora ? "#" + ancora : ""));
+  });
+
+  // Aviso discreto enquanto a página rola sozinha
+  const aviso = document.createElement("p");
+  aviso.className = "aviso-expositor";
+  aviso.textContent = "Mexa o mouse ou toque na tela para navegar";
+  aviso.setAttribute("aria-hidden", "true");
+  document.body.append(aviso);
+
+  // Mantém a tela acesa, quando o navegador permite
+  let travaTela = null;
+  async function manterTelaAcesa() {
+    try { travaTela = await navigator.wakeLock.request("screen"); } catch (e) { /* sem suporte */ }
+  }
+  manterTelaAcesa();
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible" && !travaTela) manterTelaAcesa();
+  });
+
+  const noFim = () => window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+
+  // A posição vem do tempo decorrido: a velocidade fica constante
+  // mesmo se o computador da exposição engasgar em algum quadro.
+  function passo() {
+    if (!rolando) return;
+    const y = inicioY + VELOCIDADE * (Date.now() - inicioTempo) / 1000;
+    window.scrollTo({ top: Math.round(y), behavior: "instant" });
+    if (noFim()) {
+      pararRolagem(false);
+      timerPausa = setTimeout(recomecarDoInicio, PAUSA_NO_FIM);
+      return;
+    }
+    quadro = requestAnimationFrame(passo);
+  }
+
+  function comecarRolagem() {
+    if (rolando || document.querySelector("dialog[open]")) return;
+    rolando = true;
+    inicioTempo = Date.now();
+    inicioY = window.scrollY;
+    document.body.classList.add("rolando-sozinho");
+    quadro = requestAnimationFrame(passo);
+  }
+
+  function pararRolagem(esconderAviso = true) {
+    rolando = false;
+    cancelAnimationFrame(quadro);
+    if (esconderAviso) document.body.classList.remove("rolando-sozinho");
+  }
+
+  function recomecarDoInicio() {
+    if (naGaleria) {
+      // Da página de fotos, volta para a página principal
+      location.href = "index.html?expositor";
+      return;
+    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    timerPausa = setTimeout(comecarRolagem, PAUSA_NO_TOPO);
+  }
+
+  // Qualquer interação de verdade interrompe e reinicia a contagem
+  function interacao() {
+    clearTimeout(timerPausa);
+    clearTimeout(timerOcioso);
+    pararRolagem();
+    timerOcioso = setTimeout(comecarRolagem, ESPERA_PARA_COMECAR);
+  }
+
+  ["pointerdown", "wheel", "touchstart", "keydown"].forEach((tipo) =>
+    window.addEventListener(tipo, interacao, { passive: true })
+  );
+
+  // O navegador dispara "mousemove" falso quando a página rola sob o cursor parado;
+  // só conta como interação se o mouse realmente mudou de posição.
+  let mouseX = null;
+  let mouseY = null;
+  window.addEventListener("mousemove", (e) => {
+    const mexeu = mouseX !== null && (Math.abs(e.screenX - mouseX) > 2 || Math.abs(e.screenY - mouseY) > 2);
+    mouseX = e.screenX;
+    mouseY = e.screenY;
+    if (mexeu) interacao();
+  }, { passive: true });
+
+  timerOcioso = setTimeout(comecarRolagem, ESPERA_PARA_COMECAR);
+}
